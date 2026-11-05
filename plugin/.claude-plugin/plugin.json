@@ -1,0 +1,13 @@
+{
+  "name": "veritas",
+  "displayName": "Veritas",
+  "version": "2.0.0",
+  "description": "Convenções de engenharia do Veritas, uma skill por stack",
+  "author": {
+    "name": "Caio Gonçalves",
+    "email": "caiorhcp12@gmail.com"
+  },
+  "homepage": "https://github.com/Caiorhcp/veritas",
+  "repository": "https://github.com/Caiorhcp/veritas",
+  "license": "MIT"
+}

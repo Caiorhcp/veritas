@@ -1,0 +1,75 @@
+# Regras Semgrep da skill veritas:lgpd. Copie para .semgrep/lgpd.yml no projeto.
+# Conferidas em 2026-09-23 (Semgrep 1.178): pegam os 10 casos de exemplo e
+# nenhum falso positivo nos casos limpos (Decimal(request.POST['x']),
+# Form(request.POST), cliente.email_verificado). Num projeto Django real, deram
+# 12 achados: 11 verdadeiros e 1 link de WhatsApp (`send?phone=`), que é o
+# formato do próprio WhatsApp. Esse caso se marca com `# nosemgrep`.
+rules:
+  - id: lgpd-dado-pessoal-em-log-python
+    message: >-
+      Possível dado pessoal em log ou print ($X). Logue o identificador interno, nunca o
+      dado (veritas:lgpd, "Log").
+    severity: ERROR
+    languages: [python]
+    patterns:
+      - pattern-either:
+          - patterns:
+              - pattern: $LOG.$M(..., <... $X ...>, ...)
+              - metavariable-regex:
+                  metavariable: $LOG
+                  regex: ^(logging|logger|log|_logger|LOGGER)$
+          - pattern: print(..., <... $X ...>, ...)
+      - metavariable-regex:
+          metavariable: $X
+          regex: (?i)^(.*\.)?(cpf|cnpj|rg|email|e_mail|telefone|celular|phone|senha|password|token|data_nascimento|birth_date|endereco|address|cartao|card_number)$
+  - id: lgpd-request-inteiro-em-log-python
+    message: Corpo da requisição inteiro em log. Ele carrega o que o usuário digitou, inclusive dado pessoal (veritas:lgpd, "Log").
+    severity: ERROR
+    languages: [python]
+    patterns:
+      - pattern-either:
+          - patterns:
+              - pattern-either:
+                  - pattern: $LOG.$M(..., request.$A, ...)
+                  - pattern: $LOG.$M(..., f"...{request.$A}...", ...)
+              - metavariable-regex:
+                  metavariable: $LOG
+                  regex: ^(logging|logger|log|_logger|LOGGER)$
+          - pattern: print(..., request.$A, ...)
+          - pattern: print(..., f"...{request.$A}...", ...)
+      - metavariable-regex:
+          metavariable: $A
+          regex: ^(data|POST|GET|body|FILES)$
+  - id: lgpd-serializer-todos-os-campos
+    message: >-
+      Serializer ou form com todos os campos do model. A API passa a expor todo campo novo
+      que entrar no model (LGPD art. 6º, III, necessidade). Liste os campos (veritas:lgpd, "API").
+    severity: WARNING
+    languages: [python]
+    patterns:
+      - pattern-inside: |
+          class Meta:
+            ...
+      - pattern: fields = "__all__"
+  - id: lgpd-dado-pessoal-em-log-js
+    message: >-
+      Possível dado pessoal em log ($X). Logue o identificador interno, nunca o dado
+      (veritas:lgpd, "Log").
+    severity: ERROR
+    languages: [typescript, javascript]
+    patterns:
+      - pattern: $LOG.$M(..., <... $X ...>, ...)
+      - metavariable-regex:
+          metavariable: $LOG
+          regex: ^(logger|log|console)$
+      - metavariable-regex:
+          metavariable: $X
+          regex: (?i)^(.*\.)?(cpf|cnpj|rg|email|telefone|celular|phone|senha|password|token|dataNascimento|birthDate|endereco|address|cardNumber)$
+  - id: lgpd-dado-pessoal-na-url
+    message: >-
+      Dado pessoal em query string. URL vai para log de servidor, proxy, histórico do navegador
+      e analytics. Mande no corpo da requisição (veritas:lgpd, "URL").
+    severity: ERROR
+    languages: [python, typescript, javascript]
+    patterns:
+      - pattern-regex: (?i)[?&](cpf|cnpj|email|telefone|celular|phone|senha|password|token)=

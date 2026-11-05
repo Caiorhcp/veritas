@@ -1,0 +1,9 @@
+# O produto deste repositório é markdown revisado por PR. Sem normalizar o fim
+# de linha, uma correção de uma linha vira diff de 138 — e a revisão, que é a
+# única barreira de qualidade das skills, deixa de funcionar.
+* text=auto eol=lf
+
+# Binário: não tocar.
+*.plugin binary
+*.skill binary
+*.png binary

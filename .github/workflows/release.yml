@@ -1,0 +1,38 @@
+name: release
+
+# Publica a release sozinho quando o `version` do plugin.json muda na main.
+# Subir a versão continua sendo decisão de quem abre o PR; empacotar e publicar, não.
+
+on:
+  push:
+    branches: [main]
+    paths: [plugin/.claude-plugin/plugin.json]
+
+permissions:
+  contents: write
+
+# Fica na raiz do repositório (.github/workflows/); o plugin mora em plugin/.
+defaults:
+  run:
+    working-directory: plugin
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+      - run: uv run pytest tests/ -v
+      - run: uv run python tools/validate_skills.py skills
+      - name: Empacotar e publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          V=$(python3 -c 'import json; print(json.load(open(".claude-plugin/plugin.json"))["version"])')
+          if gh release view "v$V" >/dev/null 2>&1; then
+            echo "v$V já publicada; nada a fazer."
+            exit 0
+          fi
+          uv run python tools/empacotar.py
+          gh release create "v$V" dist/veritas.plugin --title "v$V" --generate-notes

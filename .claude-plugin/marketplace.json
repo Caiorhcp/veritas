@@ -1,0 +1,15 @@
+{
+  "name": "veritas",
+  "owner": {
+    "name": "Caio Gonçalves",
+    "email": "caiorhcp12@gmail.com"
+  },
+  "description": "Convenções de engenharia do Veritas para agentes de código",
+  "plugins": [
+    {
+      "name": "veritas",
+      "source": "./plugin",
+      "description": "Convenções, arquitetura e proibições por stack"
+    }
+  ]
+}

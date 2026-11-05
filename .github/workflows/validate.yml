@@ -1,0 +1,37 @@
+name: validate
+
+# Fica na raiz do repositório (.github/workflows/); o plugin mora em plugin/.
+on:
+  pull_request:
+    paths: [plugin/**, .claude-plugin/**]
+  push:
+    branches: [main]
+    paths: [plugin/**, .claude-plugin/**]
+
+defaults:
+  run:
+    working-directory: plugin
+
+jobs:
+  skills:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+      - run: uv run pytest tests/ -v
+      - run: uv run python tools/validate_skills.py skills
+      - run: uv run python tools/validate_skills.py docs
+      # Validador oficial do Claude Code: manifesto, skills e hooks. Pega o que
+      # quebrou a v0.5.0 (hooks.json sem o envelope "hooks"), que o nosso não via.
+      - run: npm install -g @anthropic-ai/claude-code
+      - run: claude plugin validate .claude-plugin/plugin.json
+      # Regras Semgrep da skill lgpd contra os casos de tests/lgpd/. O `--test`
+      # exige regra e casos com o mesmo nome na mesma pasta.
+      - name: regras semgrep da lgpd
+        run: |
+          pip install semgrep
+          mkdir -p /tmp/lgpd-test
+          cp skills/lgpd/lgpd.semgrep.yml /tmp/lgpd-test/lgpd.yaml
+          cp tests/lgpd/lgpd.py tests/lgpd/lgpd.ts /tmp/lgpd-test/
+          semgrep --test /tmp/lgpd-test --metrics=off

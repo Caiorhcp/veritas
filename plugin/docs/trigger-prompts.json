@@ -1,0 +1,17 @@
+{
+  "_comentario": "Um prompt por skill. Escreva como um dev da casa perguntaria de verdade, sem citar o nome da skill nem a stack de forma óbvia demais — se o prompt entrega a resposta, o teste não mede nada.",
+
+  "django": "Preciso criar um endpoint que cadastra um cliente e dispara um email de boas-vindas. Onde cada parte do código vai?",
+
+  "bun-hono-api": "Vou criar um módulo novo na API. Que bibliotecas eu uso para HTTP, banco, validação e geração de ID?",
+
+  "nestjs": "Onde fica a lógica de negócio num módulo novo? E como valido o corpo da requisição?",
+
+  "nextjs": "Essa página lista produtos e tem um filtro que o usuário mexe. Server component ou client component?",
+
+  "vite": "Estou montando o front do zero. Qual estrutura de pastas eu sigo e o que uso para estado global?",
+
+  "react-native": "Como estruturo a navegação e o estado num app novo?",
+
+  "python": "Vou começar um script novo. Como organizo o projeto e gerencio as dependências?"
+}

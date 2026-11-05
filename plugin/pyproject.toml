@@ -1,0 +1,32 @@
+[project]
+name = "veritas"
+version = "0.1.0"
+description = "Veritas: convenções de engenharia em skills para agentes de código"
+readme = "README.md"
+# 3.10 é o piso do Django 5.x. Mantido baixo de propósito: um teto alto aqui
+# significa que a suíte não roda em algum ambiente e o projeto perde a única
+# verificação que pega bug de verdade.
+requires-python = ">=3.10"
+
+dependencies = [
+  "pyyaml>=6.0",               # parse do frontmatter no validador, com erro nomeado
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+
+[tool.pytest.ini_options]
+python_files = ["test_*.py"]
+testpaths = ["tests"]
+# `tests/` não tem __init__.py; sem isto o `import tools` falha.
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+# F = erros reais (nome indefinido, import morto). E9 = sintaxe/runtime.
+select = ["F", "E9", "I"]

@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Paleta do Veritas: vermelho-sangue de boi sobre papel cinza. Um chão, uma tinta, um campo. */
+:root {
+  --ground: #e2e2e2;
+  --surface: #d6d6d6;
+  --sunken: #c8c8c8;
+  --paper: #f0efef;
+  --ink: #7d0c14;
+  --soft: #74464a;
+  --accent: #7d0c14;
+  --accent-hover: #650a10;
+  --on-accent: #f0efef;
+  --field: #7d0c14;
+  --field-deep: #5a070d;
+  --on-field: #ececec;
+  --on-field-soft: #e0b9bc;
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  --ground: #161213;
+  --surface: #211a1b;
+  --sunken: #2d2425;
+  --paper: #271f20;
+  --ink: #ece0e0;
+  --soft: #b8a2a4;
+  --accent: #e0636c;
+  --accent-hover: #ea7b83;
+  --on-accent: #161213;
+  --field: #5c0b12;
+  --field-deep: #3f070c;
+  --on-field: #ece0e0;
+  --on-field-soft: #d9aeb1;
+  color-scheme: dark;
+}
+
+@theme {
+  --font-sans: var(--font-hanken), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace; /* taste-skill-ignore: só em <pre> e <code> */
+  --color-ground: var(--ground);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-soft: var(--soft);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-on-accent: var(--on-accent);
+  --color-field: var(--field);
+  --color-field-deep: var(--field-deep);
+  --color-on-field: var(--on-field);
+  --color-on-field-soft: var(--on-field-soft);
+  /* cinco tamanhos fazem todo o trabalho visível */
+  --text-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --text-small--line-height: 1.45;
+  --text-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --text-body--line-height: 1.55;
+  --text-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --text-lead--line-height: 1.3;
+  --text-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
+  --text-head--line-height: 0.95;
+  --text-display: clamp(5.5rem, 15vw, 15rem);
+  --text-display--line-height: 0.85;
+}
+
+html {
+  background: var(--ground);
+  color: var(--ink);
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; text-wrap: balance; }
+::selection { background: var(--ink); color: var(--ground); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* O motivo: o corte de 45° da aba de pasta, o mesmo do V da marca */
+.tab-cut { clip-path: polygon(0.6em 0, calc(100% - 0.6em) 0, 100% 0.6em, 100% 100%, 0 100%, 0 0.6em); }
+.folder-tab { clip-path: polygon(1.25rem 0, calc(100% - 1.25rem) 0, 100% 100%, 0 100%); }
+.notch-bullet { list-style: none; padding-left: 0; }
+.notch-bullet > li { position: relative; padding-left: 1.4em; }
+.notch-bullet > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.42em;
+  width: 0.62em;
+  height: 0.62em;
+  background: currentColor;
+  clip-path: polygon(0 0, 35% 0, 50% 30%, 65% 0, 100% 0, 100% 100%, 0 100%);
+}
+/* Borda serrilhada da folha impressa (lista de skills): dentes de 45°, o mesmo ângulo da marca */
+.scallop { clip-path: polygon(0.00% 10px, 1.25% 0, 2.50% 10px, 3.75% 0, 5.00% 10px, 6.25% 0, 7.50% 10px, 8.75% 0, 10.00% 10px, 11.25% 0, 12.50% 10px, 13.75% 0, 15.00% 10px, 16.25% 0, 17.50% 10px, 18.75% 0, 20.00% 10px, 21.25% 0, 22.50% 10px, 23.75% 0, 25.00% 10px, 26.25% 0, 27.50% 10px, 28.75% 0, 30.00% 10px, 31.25% 0, 32.50% 10px, 33.75% 0, 35.00% 10px, 36.25% 0, 37.50% 10px, 38.75% 0, 40.00% 10px, 41.25% 0, 42.50% 10px, 43.75% 0, 45.00% 10px, 46.25% 0, 47.50% 10px, 48.75% 0, 50.00% 10px, 51.25% 0, 52.50% 10px, 53.75% 0, 55.00% 10px, 56.25% 0, 57.50% 10px, 58.75% 0, 60.00% 10px, 61.25% 0, 62.50% 10px, 63.75% 0, 65.00% 10px, 66.25% 0, 67.50% 10px, 68.75% 0, 70.00% 10px, 71.25% 0, 72.50% 10px, 73.75% 0, 75.00% 10px, 76.25% 0, 77.50% 10px, 78.75% 0, 80.00% 10px, 81.25% 0, 82.50% 10px, 83.75% 0, 85.00% 10px, 86.25% 0, 87.50% 10px, 88.75% 0, 90.00% 10px, 91.25% 0, 92.50% 10px, 93.75% 0, 95.00% 10px, 96.25% 0, 97.50% 10px, 98.75% 0, 100% 10px, 100.00% calc(100% - 10px), 98.75% 100%, 97.50% calc(100% - 10px), 96.25% 100%, 95.00% calc(100% - 10px), 93.75% 100%, 92.50% calc(100% - 10px), 91.25% 100%, 90.00% calc(100% - 10px), 88.75% 100%, 87.50% calc(100% - 10px), 86.25% 100%, 85.00% calc(100% - 10px), 83.75% 100%, 82.50% calc(100% - 10px), 81.25% 100%, 80.00% calc(100% - 10px), 78.75% 100%, 77.50% calc(100% - 10px), 76.25% 100%, 75.00% calc(100% - 10px), 73.75% 100%, 72.50% calc(100% - 10px), 71.25% 100%, 70.00% calc(100% - 10px), 68.75% 100%, 67.50% calc(100% - 10px), 66.25% 100%, 65.00% calc(100% - 10px), 63.75% 100%, 62.50% calc(100% - 10px), 61.25% 100%, 60.00% calc(100% - 10px), 58.75% 100%, 57.50% calc(100% - 10px), 56.25% 100%, 55.00% calc(100% - 10px), 53.75% 100%, 52.50% calc(100% - 10px), 51.25% 100%, 50.00% calc(100% - 10px), 48.75% 100%, 47.50% calc(100% - 10px), 46.25% 100%, 45.00% calc(100% - 10px), 43.75% 100%, 42.50% calc(100% - 10px), 41.25% 100%, 40.00% calc(100% - 10px), 38.75% 100%, 37.50% calc(100% - 10px), 36.25% 100%, 35.00% calc(100% - 10px), 33.75% 100%, 32.50% calc(100% - 10px), 31.25% 100%, 30.00% calc(100% - 10px), 28.75% 100%, 27.50% calc(100% - 10px), 26.25% 100%, 25.00% calc(100% - 10px), 23.75% 100%, 22.50% calc(100% - 10px), 21.25% 100%, 20.00% calc(100% - 10px), 18.75% 100%, 17.50% calc(100% - 10px), 16.25% 100%, 15.00% calc(100% - 10px), 13.75% 100%, 12.50% calc(100% - 10px), 11.25% 100%, 10.00% calc(100% - 10px), 8.75% 100%, 7.50% calc(100% - 10px), 6.25% 100%, 5.00% calc(100% - 10px), 3.75% 100%, 2.50% calc(100% - 10px), 1.25% 100%, 0 calc(100% - 10px)); }
+/* Texto das skills, renderizado do SKILL.md */
+.prose { font-size: var(--text-body); line-height: 1.65; max-width: 72ch; }
+.prose > * + * { margin-top: 1.1em; }
+.prose h1 { font-size: var(--text-head); line-height: 1; margin-top: 0; }
+.prose h2 { font-size: 1.75rem; line-height: 1.15; margin-top: 2.4em; }
+.prose h3 { font-size: 1.3rem; line-height: 1.25; margin-top: 1.8em; }
+.prose h4 { font-size: 1.1rem; font-weight: 700; margin-top: 1.5em; }
+.prose a { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.prose a:hover { text-decoration-thickness: 2px; }
+.prose ul, .prose ol { padding-left: 1.4em; }
+.prose ul { list-style: square; }
+.prose ol { list-style: decimal; }
+.prose li + li { margin-top: 0.35em; }
+.prose li > ul, .prose li > ol { margin-top: 0.35em; }
+.prose strong { font-weight: 700; }
+.prose blockquote { padding: 1rem 1.25rem; background: var(--surface); }
+.prose blockquote > * + * { margin-top: 0.6em; }
+.prose hr { border: 0; height: 0.5rem; background: var(--surface); }
+.prose table { width: 100%; border-collapse: collapse; font-size: 0.95em; display: block; overflow-x: auto; }
+.prose th, .prose td { text-align: left; vertical-align: top; padding: 0.55rem 0.8rem; }
+.prose thead th { background: var(--field); color: var(--on-field); font-weight: 700; }
+.prose tbody tr:nth-child(even) { background: var(--surface); }
+.prose code { font-family: var(--font-mono); font-size: 0.86em; background: var(--surface); padding: 0.1em 0.35em; }
+.prose pre { background: var(--surface); padding: 1.1rem 1.25rem; overflow-x: auto; font-size: 0.875rem; line-height: 1.6; }
+.prose pre code { background: none; padding: 0; font-size: inherit; }
+
+dialog::backdrop { background: rgb(22 18 19 / 0.55); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* Controle deslizante das etapas: trilho cheio de 8px, polegar quadrado na cor de destaque */
+.stage-range { appearance: none; height: 2.5rem; background: transparent; cursor: pointer; }
+.stage-range::-webkit-slider-runnable-track { height: 8px; background: var(--sunken); }
+.stage-range::-moz-range-track { height: 8px; background: var(--sunken); }
+.stage-range::-moz-range-progress { height: 8px; background: var(--ink); }
+.stage-range::-webkit-slider-thumb { appearance: none; width: 2rem; height: 2rem; margin-top: -12px; background: var(--accent); border: 0; transition: transform 0.15s; }
+.stage-range::-moz-range-thumb { width: 2rem; height: 2rem; background: var(--accent); border: 0; border-radius: 0; }
+.stage-range:active::-webkit-slider-thumb { transform: scale(1.12); }
+@media (max-width: 640px) { .stage-range::-webkit-slider-thumb { width: 2.5rem; height: 2.5rem; margin-top: -16px; } }

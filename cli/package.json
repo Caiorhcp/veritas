@@ -1,0 +1,33 @@
+{
+  "name": "create-veritas",
+  "version": "0.1.0",
+  "description": "Cria um projeto que já funciona, com as convenções do Veritas escritas dentro dele (.veritas/, AGENTS.md, CLAUDE.md).",
+  "license": "MIT",
+  "author": "Caio Gonçalves <caiorhcp12@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caiorhcp/veritas.git",
+    "directory": "cli"
+  },
+  "keywords": ["create", "scaffold", "vite", "nextjs", "agents", "claude", "conventions"],
+  "type": "module",
+  "bin": {
+    "create-veritas": "dist/index.js"
+  },
+  "files": ["dist", "conventions", "templates"],
+  "engines": {
+    "node": ">=22.4"
+  },
+  "scripts": {
+    "conventions": "node scripts/copy-conventions.mjs",
+    "prebuild": "npm run conventions",
+    "build": "tsc -p tsconfig.json",
+    "pretest": "npm run conventions",
+    "test": "node --test \"test/*.test.ts\"",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "typescript": "^6.0.3"
+  }
+}

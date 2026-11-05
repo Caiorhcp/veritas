@@ -1,0 +1,15 @@
+node_modules
+.next
+dist
+.venv
+__pycache__
+.pytest_cache
+.ruff_cache
+*.log
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+.env*
+!.env.example
+.taste-skill
+.DS_Store
