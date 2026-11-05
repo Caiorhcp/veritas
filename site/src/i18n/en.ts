@@ -32,6 +32,10 @@ export const en: Dictionary = {
   },
   copy: { copy: "Copy", copied: "Copied", label: "Copy the command" },
   home: {
+    terminal: { title: "terminal", stack: "Stack", conventions: "Conventions", created: "Project created in", next: "Next step" },
+    how: { heading: "How it works", lead: "Install once. Everything else happens inside the project." },
+    tokens: "Optional: less code and fewer tokens, with Ponytail",
+    stacksCta: "See all skills",
     title: "Veritas",
     lead: "Engineering conventions, one per stack, written inside the project. Your AI assistant reads them before it writes code.",
     tabs: { install: "Install", two: "Two things", stacks: "Stacks", flags: "Flags", skills: "Skills" },

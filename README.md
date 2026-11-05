@@ -17,7 +17,10 @@ No Claude Code:
 ```
 /plugin marketplace add Caiorhcp/veritas
 /plugin install veritas@veritas
+/plugin install ponytail@veritas   # opcional: menos código e menos tokens
 ```
+
+O marketplace do Veritas também traz o [Ponytail](https://github.com/DietrichGebert/ponytail) (MIT, de Dietrich Gebert), que faz o agente escolher a menor mudança que resolve e gastar menos tokens. Para comprimir o contexto, a skill `/veritas:ambiente` instala e configura o [Headroom](https://pypi.org/project/headroom-ai/).
 
 Num projeto novo ou existente:
 

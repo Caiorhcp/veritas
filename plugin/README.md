@@ -54,6 +54,7 @@ As skills marcadas **só por `/`** rodam quando você chama (`/veritas:ajuda`,
 ```
 /plugin marketplace add Caiorhcp/veritas
 /plugin install veritas@veritas
+/plugin install ponytail@veritas   # opcional: menos código e menos tokens
 ```
 
 Reinicie o Claude Code. Para atualizar:

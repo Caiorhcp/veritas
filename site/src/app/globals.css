@@ -2,37 +2,49 @@
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-/* Paleta do Veritas: vermelho-sangue de boi sobre papel cinza. Um chão, uma tinta, um campo. */
+/* Paleta do Veritas: azul-noite profundo com tons pastel (céu, lilás, menta, pêssego). */
 :root {
-  --ground: #e2e2e2;
-  --surface: #d6d6d6;
-  --sunken: #c8c8c8;
-  --paper: #f0efef;
-  --ink: #7d0c14;
-  --soft: #74464a;
-  --accent: #7d0c14;
-  --accent-hover: #650a10;
-  --on-accent: #f0efef;
-  --field: #7d0c14;
-  --field-deep: #5a070d;
-  --on-field: #ececec;
-  --on-field-soft: #e0b9bc;
+  --ground: #eef2f9;
+  --surface: #e2e8f3;
+  --sunken: #d5ddeb;
+  --paper: #f8fafd;
+  --ink: #18213a;
+  --soft: #56617b;
+  --accent: #3c5fb0;
+  --accent-hover: #2f4d94;
+  --on-accent: #f8fafd;
+  --field: #dbe4f6;
+  --field-deep: #cad6ef;
+  --on-field: #18213a;
+  --on-field-soft: #4a5878;
+  --sky: #3c5fb0;
+  --lilac: #6a55c6;
+  --mint: #2c8566;
+  --peach: #b0623a;
+  --rose: #ad4774;
+  --line: #cfd8e8;
   color-scheme: light;
 }
 [data-theme="dark"] {
-  --ground: #161213;
-  --surface: #211a1b;
-  --sunken: #2d2425;
-  --paper: #271f20;
-  --ink: #ece0e0;
-  --soft: #b8a2a4;
-  --accent: #e0636c;
-  --accent-hover: #ea7b83;
-  --on-accent: #161213;
-  --field: #5c0b12;
-  --field-deep: #3f070c;
-  --on-field: #ece0e0;
-  --on-field-soft: #d9aeb1;
+  --ground: #0c111d;
+  --surface: #141b2b;
+  --sunken: #1b2437;
+  --paper: #172033;
+  --ink: #e3e9f5;
+  --soft: #95a2bc;
+  --accent: #9dbcff;
+  --accent-hover: #bad0ff;
+  --on-accent: #0c111d;
+  --field: #18223a;
+  --field-deep: #111a2e;
+  --on-field: #e3e9f5;
+  --on-field-soft: #a9b7d6;
+  --sky: #9dbcff;
+  --lilac: #c3b4fc;
+  --mint: #96dfc4;
+  --peach: #f4c3a4;
+  --rose: #f0b5cd;
+  --line: #222c42;
   color-scheme: dark;
 }
 
@@ -52,6 +64,12 @@
   --color-field-deep: var(--field-deep);
   --color-on-field: var(--on-field);
   --color-on-field-soft: var(--on-field-soft);
+  --color-sky: var(--sky);
+  --color-lilac: var(--lilac);
+  --color-mint: var(--mint);
+  --color-peach: var(--peach);
+  --color-rose: var(--rose);
+  --color-line: var(--line);
   /* cinco tamanhos fazem todo o trabalho visível */
   --text-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
   --text-small--line-height: 1.45;
@@ -86,7 +104,7 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; text-wrap: balance; }
 .tabular { font-variant-numeric: tabular-nums; }
 
 /* O motivo: o corte de 45° da aba de pasta, o mesmo do V da marca */
-.tab-cut { clip-path: polygon(0.6em 0, calc(100% - 0.6em) 0, 100% 0.6em, 100% 100%, 0 100%, 0 0.6em); }
+.tab-cut { border-radius: 0.7rem; }
 .folder-tab { clip-path: polygon(1.25rem 0, calc(100% - 1.25rem) 0, 100% 100%, 0 100%); }
 .notch-bullet { list-style: none; padding-left: 0; }
 .notch-bullet > li { position: relative; padding-left: 1.4em; }
@@ -117,7 +135,7 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; text-wrap: balance; }
 .prose li + li { margin-top: 0.35em; }
 .prose li > ul, .prose li > ol { margin-top: 0.35em; }
 .prose strong { font-weight: 700; }
-.prose blockquote { padding: 1rem 1.25rem; background: var(--surface); }
+.prose blockquote { padding: 1rem 1.25rem; background: var(--surface); border-radius: 0.75rem; }
 .prose blockquote > * + * { margin-top: 0.6em; }
 .prose hr { border: 0; height: 0.5rem; background: var(--surface); }
 .prose table { width: 100%; border-collapse: collapse; font-size: 0.95em; display: block; overflow-x: auto; }
@@ -144,3 +162,15 @@ dialog::backdrop { background: rgb(22 18 19 / 0.55); }
 .stage-range::-moz-range-thumb { width: 2rem; height: 2rem; background: var(--accent); border: 0; border-radius: 0; }
 .stage-range:active::-webkit-slider-thumb { transform: scale(1.12); }
 @media (max-width: 640px) { .stage-range::-webkit-slider-thumb { width: 2.5rem; height: 2.5rem; margin-top: -16px; } }
+
+/* Cartões com um tom pastel: o tom vem de --tint */
+.tinted { background: color-mix(in srgb, var(--tint) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--tint) 22%, transparent); }
+.tinted:hover { border-color: color-mix(in srgb, var(--tint) 55%, transparent); }
+.tint-text { color: var(--tint); }
+/* brilho suave atrás do herói */
+.glow { background:
+  radial-gradient(40rem 26rem at 78% 30%, color-mix(in srgb, var(--sky) 18%, transparent), transparent 70%),
+  radial-gradient(30rem 22rem at 15% 80%, color-mix(in srgb, var(--lilac) 14%, transparent), transparent 70%); }
+@keyframes blink { 50% { opacity: 0; } }
+.caret { display: inline-block; width: 0.55em; height: 1.1em; vertical-align: -0.2em; background: var(--accent); animation: blink 1s steps(1) infinite; }
+@media (prefers-reduced-motion: reduce) { .caret { animation: none; } }

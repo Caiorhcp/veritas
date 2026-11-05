@@ -17,7 +17,7 @@ export function GeneralSheet({ items, d }: { items: SheetItem[]; d: Dictionary["
   const [active, setActive] = useState(items[0]);
   const groups = (["geral", "processo", "manual"] as const).map((g) => ({ g, rows: items.filter((i) => i.group === g) }));
   return (
-    <section id="skills-gerais" aria-labelledby="gerais-titulo" className="bg-surface px-2.5 py-28 sm:px-8 sm:py-40">
+    <section id="skills-gerais" aria-labelledby="gerais-titulo" className="px-2.5 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto grid max-w-[90rem] gap-10 md:grid-cols-12">
         <div className="hidden md:col-span-5 md:block">
           <div className="sticky top-28">
@@ -29,7 +29,7 @@ export function GeneralSheet({ items, d }: { items: SheetItem[]; d: Dictionary["
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.24 }}
-                className="bg-field p-8 text-on-field"
+                className="rounded-3xl border border-line bg-field p-8 text-on-field"
               >
                 <code className="block font-mono text-small text-on-field-soft">skills/{active.name}/SKILL.md</code>
                 <p className="mt-6 text-head font-bold break-words">{active.name}</p>
@@ -45,7 +45,7 @@ export function GeneralSheet({ items, d }: { items: SheetItem[]; d: Dictionary["
           </div>
         </div>
 
-        <div className="scallop bg-paper px-5 py-16 sm:px-16 md:col-span-7 md:col-start-6 lg:col-span-6 lg:col-start-7">
+        <div className="rounded-3xl border border-line bg-paper px-5 py-16 sm:px-16 md:col-span-7 md:col-start-6 lg:col-span-6 lg:col-start-7">
           <Mark className="mx-auto size-8" />
           <h2 id="gerais-titulo" className="mt-6 text-center text-head">
             {d.heading}
@@ -58,7 +58,7 @@ export function GeneralSheet({ items, d }: { items: SheetItem[]; d: Dictionary["
               <ul className="mt-6 space-y-4">
                 {rows.map((r) => (
                   <li key={r.name} onMouseEnter={() => setActive(r)} onFocus={() => setActive(r)}>
-                    <Link href={r.href} className={`group block px-2 py-1 transition-colors ${active.name === r.name ? "md:bg-surface" : ""}`}>
+                    <Link href={r.href} className={`group block rounded-lg px-3 py-2 transition-colors hover:bg-surface ${active.name === r.name ? "md:bg-surface" : ""}`}>
                       <span className="flex items-baseline justify-between gap-4">
                         <span className="font-bold group-hover:underline group-hover:underline-offset-4">{r.name}</span>
                         <span className="tabular shrink-0 text-right text-small">{r.checked}</span>

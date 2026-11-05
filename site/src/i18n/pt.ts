@@ -30,6 +30,10 @@ export const pt = {
   },
   copy: { copy: "Copiar", copied: "Copiado", label: "Copiar o comando" },
   home: {
+    terminal: { title: "terminal", stack: "Stack", conventions: "Convenções", created: "Projeto criado em", next: "Próximo passo" },
+    how: { heading: "Como funciona", lead: "Instale uma vez. O resto acontece dentro do projeto." },
+    tokens: "Opcional: menos código e menos tokens, com o Ponytail",
+    stacksCta: "Ver todas as skills",
     title: "Veritas",
     lead: "Convenções de engenharia em português, uma por stack, escritas dentro do projeto. O assistente de IA lê antes de escrever código.",
     tabs: { install: "Instalar", two: "Duas coisas", stacks: "Stacks", flags: "Flags", skills: "Skills" },

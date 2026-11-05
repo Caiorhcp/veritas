@@ -37,13 +37,13 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#e2e2e2" },
-    { media: "(prefers-color-scheme: dark)", color: "#161213" },
+    { media: "(prefers-color-scheme: light)", color: "#eef2f9" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c111d" },
   ],
 };
 
 // Aplica o tema salvo antes da primeira pintura, sem piscar
-const THEME_SCRIPT = `try{var t=localStorage.getItem("tema");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){}`;
+const THEME_SCRIPT = `try{var t=localStorage.getItem("tema");if(!t)t="dark";document.documentElement.dataset.theme=t}catch(e){}`;
 
 export default async function RootLayout({ children, params }: LayoutProps<"/[lang]">) {
   const lang = await resolveLocale(params);
@@ -61,7 +61,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   };
 
   return (
-    <html lang={HTML_LANG[lang]} data-theme="light" suppressHydrationWarning className={`${sans.variable} ${mono.variable}`}>
+    <html lang={HTML_LANG[lang]} data-theme="dark" suppressHydrationWarning className={`${sans.variable} ${mono.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>

@@ -4,12 +4,22 @@
     "name": "Caio Gonçalves",
     "email": "caiorhcp12@gmail.com"
   },
-  "description": "Convenções de engenharia do Veritas para agentes de código",
+  "description": "Convenções de engenharia do Veritas e ferramentas que economizam tokens, para agentes de código",
   "plugins": [
     {
       "name": "veritas",
       "source": "./plugin",
       "description": "Convenções, arquitetura e proibições por stack"
+    },
+    {
+      "name": "ponytail",
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      },
+      "description": "Menos código e menos tokens: a menor mudança que resolve, sem abstração que ninguém pediu. MIT, por Dietrich Gebert.",
+      "homepage": "https://ponytail.dev",
+      "license": "MIT"
     }
   ]
 }

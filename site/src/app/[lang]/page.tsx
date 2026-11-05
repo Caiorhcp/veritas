@@ -3,7 +3,7 @@ import { FlagsShowcase } from "@/components/home/FlagsShowcase";
 import { GeneralSheet, type SheetItem } from "@/components/home/GeneralSheet";
 import { Hero } from "@/components/home/Hero";
 import { StackBoard } from "@/components/home/StackBoard";
-import { TwoThings } from "@/components/home/TwoThings";
+import { HowItWorks } from "@/components/home/HowItWorks";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getSkill, headings } from "@/lib/skills";
 import { GENERAL_ORDER } from "@/lib/stacks";
@@ -33,8 +33,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   return (
     <>
       <Hero lang={lang} d={d} />
-      <TwoThings d={d.home.two} />
-      <StackBoard lang={lang} d={d.home.stacks} />
+      <HowItWorks d={d.home.two} how={d.home.how} />
+      <StackBoard lang={lang} d={d.home.stacks} cta={d.home.stacksCta} />
       <FlagsShowcase lang={lang} d={d.home.flags} copy={d.copy} />
       <GeneralSheet items={items} d={d.home.general} />
       <Contribute d={d.home.contribute} />

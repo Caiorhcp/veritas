@@ -32,6 +32,10 @@ export const es: Dictionary = {
   },
   copy: { copy: "Copiar", copied: "Copiado", label: "Copiar el comando" },
   home: {
+    terminal: { title: "terminal", stack: "Stack", conventions: "Convenciones", created: "Proyecto creado en", next: "Siguiente paso" },
+    how: { heading: "Cómo funciona", lead: "Instálalo una vez. Lo demás ocurre dentro del proyecto." },
+    tokens: "Opcional: menos código y menos tokens, con Ponytail",
+    stacksCta: "Ver todas las skills",
     title: "Veritas",
     lead: "Convenciones de ingeniería, una por stack, escritas dentro del proyecto. Tu asistente de IA las lee antes de escribir código.",
     tabs: { install: "Instalar", two: "Dos cosas", stacks: "Stacks", flags: "Flags", skills: "Skills" },
