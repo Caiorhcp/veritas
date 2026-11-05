@@ -35,6 +35,17 @@ export const es: Dictionary = {
     terminal: { title: "terminal", stack: "Stack", conventions: "Convenciones", created: "Proyecto creado en", next: "Siguiente paso" },
     how: { heading: "Cómo funciona", lead: "Instálalo una vez. Lo demás ocurre dentro del proyecto." },
     tokens: "Opcional: menos código y menos tokens, con Ponytail",
+    ponytail: {
+      heading: "Menos código, menos tokens: Ponytail",
+      lead: "Veritas dice qué usar y dónde vive cada cosa. Ponytail, de Dietrich Gebert, dice cuánto escribir: el cambio más pequeño que lo resuelve. Juntos son el par que Veritas recomienda para todo proyecto.",
+      points: [
+        { title: "Qué hace", text: "Pone al agente en modo dev sénior perezoso: YAGNI, biblioteca estándar primero y ninguna abstracción que nadie pidió. Queda menos código que revisar y se gastan menos tokens." },
+        { title: "Cómo entra en Veritas", text: "El marketplace de Veritas lista Ponytail directo del repositorio de su autor. Un comando lo instala, y las actualizaciones vienen de ahí, sin copia nuestra en el medio." },
+        { title: "Cuándo usarlo", text: "En cualquier tarea de código. Las skills de Veritas definen la stack y las prohibiciones; Ponytail recorta lo que sobra. Para revisar un cambio, /ponytail-review; para auditar un repositorio entero, /ponytail-audit." },
+      ],
+      credit: "Ponytail es un proyecto de Dietrich Gebert, bajo licencia MIT. Todo el crédito es suyo: Veritas solo lo recomienda y facilita la instalación.",
+      cta: "Ver Ponytail en GitHub",
+    },
     stacksCta: "Ver todas las skills",
     title: "Veritas",
     lead: "Convenciones de ingeniería, una por stack, escritas dentro del proyecto. Tu asistente de IA las lee antes de escribir código.",
@@ -127,7 +138,7 @@ export const es: Dictionary = {
     license: "Licencia MIT",
     by: "Por",
     inspired: "Inspirado en Prumo, de St. Joseph Works",
-    photo: "Fotos: Mika Ruusunen y Roman Kraft (Unsplash)",
+    photo: "Ahorro de tokens: Ponytail, de Dietrich Gebert (MIT)",
     top: "Arriba",
   },
   skills: {

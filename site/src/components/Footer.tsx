@@ -41,6 +41,7 @@ export function Footer({ lang, d }: { lang: Locale; d: Dictionary }) {
         { href: LINKS.npm, label: d.footer.npm },
         { href: LINKS.author, label: "Caio Gonçalves" },
         { href: LINKS.prumo, label: "Prumo" },
+        { href: LINKS.ponytail, label: "Ponytail" },
       ],
     },
   ];
@@ -80,7 +81,9 @@ export function Footer({ lang, d }: { lang: Locale; d: Dictionary }) {
             <p className="text-on-field-soft">
               <a href={LINKS.prumo} className="underline underline-offset-4 hover:text-on-field">{d.footer.inspired}</a>
             </p>
-            <p className="text-on-field-soft">{d.footer.photo}</p>
+            <p className="text-on-field-soft">
+              <a href={LINKS.ponytail} className="underline underline-offset-4 hover:text-on-field">{d.footer.photo}</a>
+            </p>
           </div>
         </div>
         <div className="mt-14 flex items-center justify-between gap-4 text-small">

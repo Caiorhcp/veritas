@@ -41,6 +41,8 @@ Veritas is a set of engineering conventions (written in Portuguese), one per sta
 
 ## Créditos
 
+O Veritas recomenda e distribui pelo seu marketplace o [Ponytail](https://github.com/DietrichGebert/ponytail), de [Dietrich Gebert](https://github.com/DietrichGebert), sob licença MIT. O Veritas diz o que usar e onde cada coisa mora; o Ponytail diz quanto escrever, com a menor mudança que resolve e menos tokens gastos. O plugin é instalado direto do repositório do autor, sem cópia aqui, e todo o crédito por ele é do Dietrich.
+
 A ideia de escrever as convenções dentro do projeto, e de que nenhuma resposta é decidida em silêncio, vem do [Prumo](https://prumo.stjosephworks.org), da St. Joseph Works (MIT).
 
 Licença [MIT](LICENSE) © 2026 Caio Gonçalves.

@@ -35,6 +35,17 @@ export const en: Dictionary = {
     terminal: { title: "terminal", stack: "Stack", conventions: "Conventions", created: "Project created in", next: "Next step" },
     how: { heading: "How it works", lead: "Install once. Everything else happens inside the project." },
     tokens: "Optional: less code and fewer tokens, with Ponytail",
+    ponytail: {
+      heading: "Less code, fewer tokens: Ponytail",
+      lead: "Veritas says what to use and where everything lives. Ponytail, by Dietrich Gebert, says how much to write: the smallest change that solves it. Together they are the pair Veritas recommends for every project.",
+      points: [
+        { title: "What it does", text: "Puts the agent in lazy senior dev mode: YAGNI, standard library first and no abstraction nobody asked for. Less code to review and fewer tokens spent." },
+        { title: "How it fits into Veritas", text: "The Veritas marketplace lists Ponytail straight from its author's repository. One command installs it, and updates come from there, with no copy of ours in between." },
+        { title: "When to use it", text: "On any coding task. Veritas skills set the stack and the prohibitions; Ponytail trims what's left. To review a change, /ponytail-review; to audit a whole repository, /ponytail-audit." },
+      ],
+      credit: "Ponytail is a project by Dietrich Gebert, under the MIT license. All credit is his: Veritas only recommends it and makes it easy to install.",
+      cta: "See Ponytail on GitHub",
+    },
     stacksCta: "See all skills",
     title: "Veritas",
     lead: "Engineering conventions, one per stack, written inside the project. Your AI assistant reads them before it writes code.",
@@ -127,7 +138,7 @@ export const en: Dictionary = {
     license: "MIT licence",
     by: "By",
     inspired: "Inspired by Prumo, by St. Joseph Works",
-    photo: "Photos: Mika Ruusunen and Roman Kraft (Unsplash)",
+    photo: "Token savings: Ponytail, by Dietrich Gebert (MIT)",
     top: "Top",
   },
   skills: {

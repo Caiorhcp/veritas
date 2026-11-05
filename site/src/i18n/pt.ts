@@ -33,6 +33,17 @@ export const pt = {
     terminal: { title: "terminal", stack: "Stack", conventions: "Convenções", created: "Projeto criado em", next: "Próximo passo" },
     how: { heading: "Como funciona", lead: "Instale uma vez. O resto acontece dentro do projeto." },
     tokens: "Opcional: menos código e menos tokens, com o Ponytail",
+    ponytail: {
+      heading: "Menos código, menos tokens: Ponytail",
+      lead: "O Veritas diz o que usar e onde cada coisa mora. O Ponytail, de Dietrich Gebert, diz quanto escrever: a menor mudança que resolve. Juntos, são o par que o Veritas recomenda para todo projeto.",
+      points: [
+        { title: "O que ele faz", text: "Põe o agente no modo do dev sênior preguiçoso: YAGNI, biblioteca padrão primeiro e nenhuma abstração que ninguém pediu. Sai menos código para revisar e se gastam menos tokens." },
+        { title: "Como entra no Veritas", text: "O marketplace do Veritas lista o Ponytail direto do repositório do autor. Um comando instala, e as atualizações vêm de lá, sem cópia nossa no meio." },
+        { title: "Quando usar", text: "Em qualquer tarefa de código. As skills do Veritas definem a stack e as proibições; o Ponytail corta o que sobra. Para revisar uma mudança, /ponytail-review; para auditar um repositório inteiro, /ponytail-audit." },
+      ],
+      credit: "O Ponytail é um projeto de Dietrich Gebert, sob licença MIT. Todo o crédito é dele: o Veritas só o recomenda e facilita a instalação.",
+      cta: "Ver o Ponytail no GitHub",
+    },
     stacksCta: "Ver todas as skills",
     title: "Veritas",
     lead: "Convenções de engenharia em português, uma por stack, escritas dentro do projeto. O assistente de IA lê antes de escrever código.",
@@ -125,7 +136,7 @@ export const pt = {
     license: "Licença MIT",
     by: "Por",
     inspired: "Inspirado no Prumo, da St. Joseph Works",
-    photo: "Fotos: Mika Ruusunen e Roman Kraft (Unsplash)",
+    photo: "Economia de tokens: Ponytail, de Dietrich Gebert (MIT)",
     top: "Topo",
   },
   skills: {

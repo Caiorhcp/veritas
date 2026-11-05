@@ -13,6 +13,8 @@ export const LINKS = {
   npm: "https://www.npmjs.com/package/create-veritas",
   author: "https://github.com/Caiorhcp",
   prumo: "https://prumo.stjosephworks.org",
+  ponytail: "https://github.com/DietrichGebert/ponytail",
+  ponytailAuthor: "https://github.com/DietrichGebert",
   stjoseph: "https://stjosephworks.org",
 };
 

@@ -57,6 +57,8 @@ As skills marcadas **só por `/`** rodam quando você chama (`/veritas:ajuda`,
 /plugin install ponytail@veritas   # opcional: menos código e menos tokens
 ```
 
+O [Ponytail](https://github.com/DietrichGebert/ponytail) é de [Dietrich Gebert](https://github.com/DietrichGebert) (MIT). O Veritas só o lista no marketplace; ele é instalado direto do repositório do autor.
+
 Reinicie o Claude Code. Para atualizar:
 
 ```bash

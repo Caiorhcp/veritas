@@ -4,6 +4,7 @@ import { GeneralSheet, type SheetItem } from "@/components/home/GeneralSheet";
 import { Hero } from "@/components/home/Hero";
 import { StackBoard } from "@/components/home/StackBoard";
 import { HowItWorks } from "@/components/home/HowItWorks";
+import { PonytailSection } from "@/components/home/PonytailSection";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getSkill, headings } from "@/lib/skills";
 import { GENERAL_ORDER } from "@/lib/stacks";
@@ -36,6 +37,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <HowItWorks d={d.home.two} how={d.home.how} />
       <StackBoard lang={lang} d={d.home.stacks} cta={d.home.stacksCta} />
       <FlagsShowcase lang={lang} d={d.home.flags} copy={d.copy} />
+      <PonytailSection d={d.home.ponytail} copy={d.copy} />
       <GeneralSheet items={items} d={d.home.general} />
       <Contribute d={d.home.contribute} />
     </>
