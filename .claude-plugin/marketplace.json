@@ -14,8 +14,8 @@
     {
       "name": "ponytail",
       "source": {
-        "source": "github",
-        "repo": "DietrichGebert/ponytail"
+        "source": "url",
+        "url": "https://github.com/DietrichGebert/ponytail.git"
       },
       "description": "Menos código e menos tokens: a menor mudança que resolve, sem abstração que ninguém pediu. MIT, por Dietrich Gebert.",
       "homepage": "https://ponytail.dev",
