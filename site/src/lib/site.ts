@@ -1,6 +1,6 @@
 // shortcut: domínio provisório; troque por NEXT_PUBLIC_SITE_URL quando o site tiver endereço próprio
 export const SITE = {
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://veritas-caiorhcp.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://veritasdev.vercel.app",
   name: "Veritas",
   author: "Caio Gonçalves",
 };
