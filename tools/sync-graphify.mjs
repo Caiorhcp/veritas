@@ -20,6 +20,7 @@ const files = [
   ...REFS.map((r) => [`graphify/skills/claude/references/${r}.md`, `skills/graphify/references/${r}.md`]),
   ["LICENSE", "LICENSE"],
   ["NOTICE", "NOTICE"],
+  ["LICENSE-MIT", "LICENSE-MIT"], // o NOTICE diz que o texto MIT original fica neste arquivo
 ];
 
 for (const [from, to] of files) {
