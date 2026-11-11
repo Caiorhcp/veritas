@@ -46,6 +46,7 @@ esta tabela:
 | Skill | Cobre | Como entra |
 |---|---|---|
 | `principios` | decisão entre abordagens, avaliar dependência, escopo | sozinha |
+| `mapa-do-codigo` | projeto grande ou desconhecido, arquitetura, impacto de mudança; quando usar o Graphify e o Ponytail | sozinha |
 | `projeto-existente` | sistema legado ou de outra equipe: conservar a arquitetura dele ou remodelar | sozinha |
 | `lgpd` | dado pessoal no código e no trabalho do agente, incidente, checagem no CI | sozinha |
 | `clickup` | pegar task pelo card, critérios de aceite, relatório de fechamento | sozinha |

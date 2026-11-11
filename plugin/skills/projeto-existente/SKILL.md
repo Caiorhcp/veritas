@@ -65,6 +65,11 @@ máximo, uma segunda passada.
 
 ## Conservar, na prática
 
+**Projeto grande ou desconhecido? Comece pelo mapa.** Antes de abrir arquivo por
+arquivo, monte o grafo do código com o Graphify, que é grátis para código, e
+consulte-o para achar o vizinho mais parecido e o que depende do que vai mudar.
+Quando e como: skill `mapa-do-codigo`.
+
 **O vizinho mais parecido é o molde.** Antes de escrever, abra duas ou três
 partes do sistema que já fazem algo parecido com a tarefa: uma tela irmã, um
 endpoint do mesmo módulo, um teste do mesmo tipo. Copie a forma delas:

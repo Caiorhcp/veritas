@@ -122,6 +122,7 @@ cinco jeitos defensáveis e usar o que o time escolheu.
 | Skill | Entra quando você mexe em |
 |---|---|
 | `principios` | decisão de arquitetura, escolha entre duas abordagens, avaliar dependência nova |
+| `mapa-do-codigo` | projeto grande ou desconhecido, pergunta de arquitetura ou de impacto de mudança, repositório com `graphify-out/` |
 | `projeto-existente` | primeira mudança num sistema legado, de cliente ou de outra equipe. Pergunta uma vez se é para conservar a arquitetura dele ou remodelar, e anota a resposta no `CLAUDE.md` do projeto |
 | `lgpd` | código com dado pessoal (CPF, saúde, contato, financeiro), log, exportação, integração com terceiro, dado exposto. Também impede que dado real vá para card, PR, prompt ou máquina de dev |
 | `atomic-design` | onde um componente de interface mora, em qualquer front, inclusive templates Django |

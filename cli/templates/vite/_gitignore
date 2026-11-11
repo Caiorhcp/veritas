@@ -5,3 +5,6 @@ dist
 .env
 .env.*
 !.env.example
+
+# grafo do Graphify (veja .veritas/ ou a skill mapa-do-codigo)
+graphify-out/

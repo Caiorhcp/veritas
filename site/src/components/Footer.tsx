@@ -42,6 +42,7 @@ export function Footer({ lang, d }: { lang: Locale; d: Dictionary }) {
         { href: LINKS.author, label: "Caio Gonçalves" },
         { href: LINKS.prumo, label: "Prumo" },
         { href: LINKS.ponytail, label: "Ponytail" },
+        { href: LINKS.graphify, label: "Graphify" },
       ],
     },
   ];

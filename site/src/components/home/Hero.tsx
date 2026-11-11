@@ -45,8 +45,7 @@ export function Hero({ lang, d }: { lang: Locale; d: Dictionary }) {
                 <Command cmd="/plugin marketplace add Caiorhcp/veritas" copy={d.copy} className="rounded-xl" />
                 <Command cmd="/plugin install veritas@veritas" copy={d.copy} className="rounded-xl" />
               </div>
-              <p className="mt-4 mb-2.5 text-small font-medium text-soft">{h.tokens}</p>
-              <Command cmd="/plugin install ponytail@veritas" copy={d.copy} className="rounded-xl" />
+              <p className="mt-3 text-small text-soft">{h.tokens}</p>
             </div>
           </RevealItem>
         </Reveal>

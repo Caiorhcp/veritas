@@ -34,17 +34,28 @@ export const en: Dictionary = {
   home: {
     terminal: { title: "terminal", stack: "Stack", conventions: "Conventions", created: "Project created in", next: "Next step" },
     how: { heading: "How it works", lead: "Install once. Everything else happens inside the project." },
-    tokens: "Optional: less code and fewer tokens, with Ponytail",
+    tokens: "Included: Ponytail (less code, fewer tokens) and Graphify (a map of your code)",
     ponytail: {
       heading: "Less code, fewer tokens: Ponytail",
       lead: "Veritas says what to use and where everything lives. Ponytail, by Dietrich Gebert, says how much to write: the smallest change that solves it. Together they are the pair Veritas recommends for every project.",
       points: [
         { title: "What it does", text: "Puts the agent in lazy senior dev mode: YAGNI, standard library first and no abstraction nobody asked for. Less code to review and fewer tokens spent." },
-        { title: "How it fits into Veritas", text: "The Veritas marketplace lists Ponytail straight from its author's repository. One command installs it, and updates come from there, with no copy of ours in between." },
+        { title: "How it fits into Veritas", text: "Installing Veritas installs Ponytail, straight from its author's repository. Updates come from there, with no copy of ours in between." },
         { title: "When to use it", text: "On any coding task. Veritas skills set the stack and the prohibitions; Ponytail trims what's left. To review a change, /ponytail-review; to audit a whole repository, /ponytail-audit." },
       ],
       credit: "Ponytail is a project by Dietrich Gebert, under the MIT license. All credit is his: Veritas only recommends it and makes it easy to install.",
       cta: "See Ponytail on GitHub",
+    },
+    graphify: {
+      heading: "A map of your code: Graphify",
+      lead: "Graphify, by Graphify Labs, turns a project's code and documents into a graph you can query. Veritas installs it alongside and says when it's worth it: before changing a large or unfamiliar project, and for architecture or impact questions.",
+      points: [
+        { title: "What it does", text: "Reads code through its syntax tree, spending no tokens, and builds a graph of files, functions and relationships, with communities and a report. Documents, PDFs and images can be included too, when you allow it." },
+        { title: "How it fits into Veritas", text: "Installing Veritas installs Graphify. The official skill ships unchanged, from a tagged release of the Graphify Labs repository, and Veritas's mapa-do-codigo skill guides when to query the graph and when a plain search is enough." },
+        { title: "When to use it", text: "First contact with a large system: /graphify . builds the code graph. Then /graphify query \"what breaks if I change X?\". For a one-off task it isn't worth it: a plain search is faster." },
+      ],
+      credit: "Graphify is a project by Graphify Labs, under the Apache-2.0 license. All credit is theirs: Veritas packages the official skill unchanged and makes it easy to install.",
+      cta: "See Graphify on GitHub",
     },
     stacksCta: "See all skills",
     title: "Veritas",

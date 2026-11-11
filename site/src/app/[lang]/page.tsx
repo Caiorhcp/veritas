@@ -4,7 +4,9 @@ import { GeneralSheet, type SheetItem } from "@/components/home/GeneralSheet";
 import { Hero } from "@/components/home/Hero";
 import { StackBoard } from "@/components/home/StackBoard";
 import { HowItWorks } from "@/components/home/HowItWorks";
+import { Network, Puzzle, Search } from "lucide-react";
 import { PonytailSection } from "@/components/home/PonytailSection";
+import { LINKS } from "@/lib/site";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getSkill, headings } from "@/lib/skills";
 import { GENERAL_ORDER } from "@/lib/stacks";
@@ -37,7 +39,25 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <HowItWorks d={d.home.two} how={d.home.how} />
       <StackBoard lang={lang} d={d.home.stacks} cta={d.home.stacksCta} />
       <FlagsShowcase lang={lang} d={d.home.flags} copy={d.copy} />
-      <PonytailSection d={d.home.ponytail} copy={d.copy} />
+      <PonytailSection
+        id="ponytail"
+        d={d.home.ponytail}
+        copy={d.copy}
+        cmd="/plugin install ponytail@veritas"
+        tint="var(--mint)"
+        repo={LINKS.ponytail}
+        author={{ href: LINKS.ponytailAuthor, label: "@DietrichGebert" }}
+      />
+      <PonytailSection
+        id="graphify"
+        d={d.home.graphify}
+        copy={d.copy}
+        cmd="/graphify ."
+        tint="var(--sky)"
+        repo={LINKS.graphify}
+        author={{ href: LINKS.graphifyAuthor, label: "@Graphify-Labs" }}
+        icons={[Network, Puzzle, Search]}
+      />
       <GeneralSheet items={items} d={d.home.general} />
       <Contribute d={d.home.contribute} />
     </>

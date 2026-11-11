@@ -15,6 +15,8 @@ export const LINKS = {
   prumo: "https://prumo.stjosephworks.org",
   ponytail: "https://github.com/DietrichGebert/ponytail",
   ponytailAuthor: "https://github.com/DietrichGebert",
+  graphify: "https://github.com/Graphify-Labs/graphify",
+  graphifyAuthor: "https://github.com/Graphify-Labs",
   stjoseph: "https://stjosephworks.org",
 };
 

@@ -17,10 +17,14 @@ No Claude Code:
 ```
 /plugin marketplace add Caiorhcp/veritas
 /plugin install veritas@veritas
-/plugin install ponytail@veritas   # opcional: menos código e menos tokens
 ```
 
-O marketplace do Veritas também traz o [Ponytail](https://github.com/DietrichGebert/ponytail) (MIT, de Dietrich Gebert), que faz o agente escolher a menor mudança que resolve e gastar menos tokens. Para comprimir o contexto, a skill `/veritas:ambiente` instala e configura o [Headroom](https://pypi.org/project/headroom-ai/).
+Instalar o Veritas instala junto dois plugins de terceiros:
+
+- [Ponytail](https://github.com/DietrichGebert/ponytail) (MIT, de Dietrich Gebert): o agente escolhe a menor mudança que resolve e gasta menos tokens.
+- [Graphify](https://github.com/Graphify-Labs/graphify) (Apache-2.0, da Graphify Labs): monta um grafo do código e dos documentos para consultar antes de mexer em projeto grande. A skill oficial vem empacotada sem alterações em `plugins/graphify/`.
+
+A skill `mapa-do-codigo` do Veritas diz quando usar cada um. Para comprimir o contexto, a skill `/veritas:ambiente` instala e configura o [Headroom](https://pypi.org/project/headroom-ai/).
 
 Num projeto novo ou existente:
 
@@ -42,6 +46,8 @@ Veritas is a set of engineering conventions (written in Portuguese), one per sta
 ## Créditos
 
 O Veritas recomenda e distribui pelo seu marketplace o [Ponytail](https://github.com/DietrichGebert/ponytail), de [Dietrich Gebert](https://github.com/DietrichGebert), sob licença MIT. O Veritas diz o que usar e onde cada coisa mora; o Ponytail diz quanto escrever, com a menor mudança que resolve e menos tokens gastos. O plugin é instalado direto do repositório do autor, sem cópia aqui, e todo o crédito por ele é do Dietrich.
+
+O Veritas também distribui o [Graphify](https://github.com/Graphify-Labs/graphify), da [Graphify Labs](https://github.com/Graphify-Labs), sob licença Apache-2.0. Como o Graphify não publica um plugin para o Claude Code, a skill oficial é copiada sem alterações de uma versão marcada (`tools/sync-graphify.mjs`), com o `LICENSE` e o `NOTICE` originais em `plugins/graphify/`. Todo o crédito pelo Graphify é deles.
 
 A ideia de escrever as convenções dentro do projeto, e de que nenhuma resposta é decidida em silêncio, vem do [Prumo](https://prumo.stjosephworks.org), da St. Joseph Works (MIT).
 

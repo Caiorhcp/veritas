@@ -18,6 +18,7 @@ Guia de uso: [`docs/COMO-USAR.md`](docs/COMO-USAR.md).
 | Skill | Escopo | Conferida contra |
 |---|---|---|
 | `principios` | geral | autoral |
+| `mapa-do-codigo` | geral | Graphify 0.9.106 · Ponytail 5.3 |
 | `projeto-existente` | geral | autoral |
 | `lgpd` | geral | Lei 13.709/2018 e Res. CD/ANPD 15/2024 |
 | `docs-oficiais` | geral | Firecrawl CLI 1.24.4 |
@@ -54,10 +55,9 @@ As skills marcadas **só por `/`** rodam quando você chama (`/veritas:ajuda`,
 ```
 /plugin marketplace add Caiorhcp/veritas
 /plugin install veritas@veritas
-/plugin install ponytail@veritas   # opcional: menos código e menos tokens
 ```
 
-O [Ponytail](https://github.com/DietrichGebert/ponytail) é de [Dietrich Gebert](https://github.com/DietrichGebert) (MIT). O Veritas só o lista no marketplace; ele é instalado direto do repositório do autor.
+Junto com o Veritas vêm o [Ponytail](https://github.com/DietrichGebert/ponytail), de [Dietrich Gebert](https://github.com/DietrichGebert) (MIT), instalado direto do repositório do autor, e o [Graphify](https://github.com/Graphify-Labs/graphify), da Graphify Labs (Apache-2.0), cuja skill oficial o Veritas empacota sem alterações. Quando usar cada um: skill `mapa-do-codigo`.
 
 Reinicie o Claude Code. Para atualizar:
 

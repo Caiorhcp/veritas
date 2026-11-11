@@ -8,3 +8,6 @@ next-env.d.ts
 .env.*
 !.env.example
 .vercel
+
+# grafo do Graphify (veja .veritas/ ou a skill mapa-do-codigo)
+graphify-out/

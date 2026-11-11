@@ -32,17 +32,28 @@ export const pt = {
   home: {
     terminal: { title: "terminal", stack: "Stack", conventions: "Convenções", created: "Projeto criado em", next: "Próximo passo" },
     how: { heading: "Como funciona", lead: "Instale uma vez. O resto acontece dentro do projeto." },
-    tokens: "Opcional: menos código e menos tokens, com o Ponytail",
+    tokens: "Já vêm junto: o Ponytail (menos código e menos tokens) e o Graphify (o mapa do código)",
     ponytail: {
       heading: "Menos código, menos tokens: Ponytail",
       lead: "O Veritas diz o que usar e onde cada coisa mora. O Ponytail, de Dietrich Gebert, diz quanto escrever: a menor mudança que resolve. Juntos, são o par que o Veritas recomenda para todo projeto.",
       points: [
         { title: "O que ele faz", text: "Põe o agente no modo do dev sênior preguiçoso: YAGNI, biblioteca padrão primeiro e nenhuma abstração que ninguém pediu. Sai menos código para revisar e se gastam menos tokens." },
-        { title: "Como entra no Veritas", text: "O marketplace do Veritas lista o Ponytail direto do repositório do autor. Um comando instala, e as atualizações vêm de lá, sem cópia nossa no meio." },
+        { title: "Como entra no Veritas", text: "Instalar o Veritas instala o Ponytail, direto do repositório do autor. As atualizações vêm de lá, sem cópia nossa no meio." },
         { title: "Quando usar", text: "Em qualquer tarefa de código. As skills do Veritas definem a stack e as proibições; o Ponytail corta o que sobra. Para revisar uma mudança, /ponytail-review; para auditar um repositório inteiro, /ponytail-audit." },
       ],
       credit: "O Ponytail é um projeto de Dietrich Gebert, sob licença MIT. Todo o crédito é dele: o Veritas só o recomenda e facilita a instalação.",
       cta: "Ver o Ponytail no GitHub",
+    },
+    graphify: {
+      heading: "O mapa do código: Graphify",
+      lead: "O Graphify, da Graphify Labs, transforma o código e os documentos do projeto num grafo que dá para consultar. O Veritas o instala junto e diz quando vale usar: antes de mexer em projeto grande ou desconhecido, e em perguntas de arquitetura ou de impacto.",
+      points: [
+        { title: "O que ele faz", text: "Lê o código pela árvore sintática, sem gastar tokens, e monta um grafo de arquivos, funções e relações, com comunidades e um relatório. Documentos, PDFs e imagens também entram, quando você autoriza." },
+        { title: "Como entra no Veritas", text: "Instalar o Veritas instala o Graphify. A skill oficial vem sem alterações, de uma versão marcada do repositório da Graphify Labs, e a skill mapa-do-codigo do Veritas orienta quando consultar o grafo e quando uma busca simples basta." },
+        { title: "Quando usar", text: "Primeiro contato com um sistema grande: /graphify . monta o grafo do código. Depois, /graphify query \"o que quebra se eu mudar X?\". Para uma tarefa pontual, não vale a pena: busca normal é mais rápida." },
+      ],
+      credit: "O Graphify é um projeto da Graphify Labs, sob licença Apache-2.0. Todo o crédito é deles: o Veritas empacota a skill oficial sem alterações e facilita a instalação.",
+      cta: "Ver o Graphify no GitHub",
     },
     stacksCta: "Ver todas as skills",
     title: "Veritas",
