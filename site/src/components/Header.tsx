@@ -10,6 +10,7 @@ export function Header({ lang, d }: { lang: Locale; d: Dictionary }) {
   const links = [
     { href: `/${lang}/skills`, label: d.nav.skills },
     { href: `/${lang}/cli`, label: d.nav.cli },
+    { href: `/${lang}/extensao`, label: d.nav.extension },
     { href: `/${lang}/comecar`, label: d.nav.start },
   ];
   return (

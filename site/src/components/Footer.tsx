@@ -23,6 +23,7 @@ export function Footer({ lang, d }: { lang: Locale; d: Dictionary }) {
         { href: `/${lang}`, label: d.nav.home },
         { href: `/${lang}/skills`, label: d.nav.skills },
         { href: `/${lang}/cli`, label: d.nav.cli },
+        { href: `/${lang}/extensao`, label: d.nav.extension },
         { href: `/${lang}/comecar`, label: d.nav.start },
       ],
     },

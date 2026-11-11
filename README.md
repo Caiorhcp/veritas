@@ -8,7 +8,7 @@ Este repositório tem quatro partes:
 |---|---|
 | [`plugin/`](plugin) | O plugin para Claude Code e Cowork: uma skill por stack (Vite, Next.js, NestJS, Django, React Native, Python, Bun + Hono) e skills gerais (princípios, LGPD, atomic design, projeto existente). |
 | [`cli/`](cli) | `create-veritas`: cria um projeto que já funciona com as convenções dentro, em `.veritas/`, ou adiciona as convenções a um projeto existente. |
-| [`extension/`](extension) | A extensão para VS Code, Cursor, Windsurf e afins: aplica as convenções no formato de cada assistente de IA, painel de convenções, projeto novo e o grafo do Graphify. |
+| [`extension/`](extension) | A extensão para VS Code, Cursor, Windsurf e afins: aplica as convenções no formato de cada assistente de IA, painel de convenções, projeto novo e o grafo do Graphify. Download e instalação manual: [veritasdev.vercel.app/pt/extensao](https://veritasdev.vercel.app/pt/extensao). |
 | [`site/`](site) | O site com a documentação, em português, inglês e espanhol. |
 
 ## Usar

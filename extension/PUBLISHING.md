@@ -16,6 +16,17 @@ npx @vscode/vsce package     # gera veritas-<versão>.vsix (roda o build antes)
 
 Para uma versão nova: suba `version` no `package.json` antes de empacotar.
 
+## Download manual pelo site
+
+Depois de gerar o pacote, copie-o para o site (que mostra versão, tamanho e SHA-256 na página /extensao):
+
+```powershell
+cd ..\site
+node scripts/sync-vsix.mjs
+```
+
+Envie a mudança; a Vercel publica o arquivo novo em `https://veritasdev.vercel.app/downloads/veritas-<versão>.vsix`.
+
 ## 1. VS Code Marketplace
 
 1. Crie uma organização no Azure DevOps (grátis): https://dev.azure.com → "New organization". Qualquer nome serve; ela só existe para emitir o token.

@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...localized("/", { changeFrequency: "monthly", priority: 1 }),
     ...localized("/comecar", { changeFrequency: "monthly", priority: 0.9 }),
+    ...localized("/extensao", { changeFrequency: "monthly", priority: 0.9 }),
     ...localized("/cli", { changeFrequency: "monthly", priority: 0.9 }),
     ...localized("/skills", { changeFrequency: "weekly", priority: 0.9 }),
     ...getSkills().flatMap((s) => [
