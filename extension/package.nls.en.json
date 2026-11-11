@@ -1,0 +1,19 @@
+{
+  "ext.description": "Veritas engineering conventions in your project, in each AI assistant's own format (Cursor, Copilot, Windsurf, Cline, Roo, Continue, Claude, Codex, Gemini), plus a code graph with Graphify.",
+  "cmd.apply": "Apply conventions to project",
+  "cmd.update": "Update conventions",
+  "cmd.search": "Search conventions",
+  "cmd.newProject": "New project",
+  "cmd.graphBuild": "Build code graph",
+  "cmd.graphUpdate": "Update graph",
+  "cmd.graphOpen": "Open graph",
+  "cmd.skillAdd": "Add to project",
+  "cmd.skillRemove": "Remove from project",
+  "cmd.refresh": "Refresh",
+  "cmd.openFile": "Open convention file",
+  "cmd.focus": "Show conventions",
+  "view.skills": "Conventions",
+  "view.welcome": "No conventions found.\n[Apply conventions to project](command:veritas.apply)\n[New project](command:veritas.newProject)",
+  "cfg.targets": "AI assistants that receive rule files when conventions are applied. Default: all.",
+  "cfg.promptOnOpen": "Ask whether to apply the conventions when opening a project with a known stack and no .veritas/."
+}

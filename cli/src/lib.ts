@@ -106,12 +106,17 @@ export function upsertBlock(current: string, block: string): string {
   return current.replace(/\s*$/, '\n\n') + block + '\n';
 }
 
-export function writeVeritas(dir: string, skills: string[], catalog: Map<string, Skill>, conventionsDir = CONVENTIONS_DIR): void {
+/** Só a pasta .veritas/ (skills, INDEX.md, VERSION). A extensão do editor usa esta parte sozinha. */
+export function writeConventions(dir: string, skills: string[], catalog: Map<string, Skill>, conventionsDir = CONVENTIONS_DIR): void {
   const out = join(dir, '.veritas');
   mkdirSync(out, { recursive: true });
   for (const s of skills) cpSync(join(conventionsDir, s), join(out, s), { recursive: true });
   writeFileSync(join(out, 'INDEX.md'), buildIndex(skills, catalog));
   writeFileSync(join(out, 'VERSION'), VERSION + '\n');
+}
+
+export function writeVeritas(dir: string, skills: string[], catalog: Map<string, Skill>, conventionsDir = CONVENTIONS_DIR): void {
+  writeConventions(dir, skills, catalog, conventionsDir);
   for (const f of ['AGENTS.md', 'CLAUDE.md']) {
     const p = join(dir, f);
     writeFileSync(p, upsertBlock(readText(p), agentsBlock()));

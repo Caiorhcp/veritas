@@ -1,0 +1,19 @@
+{
+  "ext.description": "Convenções de engenharia do Veritas no seu projeto, no formato de cada assistente de IA (Cursor, Copilot, Windsurf, Cline, Roo, Continue, Claude, Codex, Gemini), mais o grafo do código com o Graphify.",
+  "cmd.apply": "Aplicar convenções ao projeto",
+  "cmd.update": "Atualizar convenções",
+  "cmd.search": "Buscar convenção",
+  "cmd.newProject": "Novo projeto",
+  "cmd.graphBuild": "Montar grafo do código",
+  "cmd.graphUpdate": "Atualizar grafo",
+  "cmd.graphOpen": "Abrir grafo",
+  "cmd.skillAdd": "Adicionar ao projeto",
+  "cmd.skillRemove": "Remover do projeto",
+  "cmd.refresh": "Recarregar",
+  "cmd.openFile": "Abrir arquivo da convenção",
+  "cmd.focus": "Mostrar convenções",
+  "view.skills": "Convenções",
+  "view.welcome": "Nenhuma convenção encontrada.\n[Aplicar convenções ao projeto](command:veritas.apply)\n[Novo projeto](command:veritas.newProject)",
+  "cfg.targets": "Assistentes de IA que recebem os arquivos de regra ao aplicar as convenções. O padrão é todos.",
+  "cfg.promptOnOpen": "Perguntar se quer aplicar as convenções ao abrir um projeto com stack conhecida e sem .veritas/."
+}

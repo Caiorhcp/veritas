@@ -1,0 +1,130 @@
+{
+  "name": "veritas",
+  "displayName": "Veritas",
+  "description": "%ext.description%",
+  "version": "0.1.0",
+  "publisher": "caiorhcp",
+  "license": "MIT",
+  "author": "Caio Gonçalves <caiorhcp12@gmail.com>",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#0c111d",
+    "theme": "dark"
+  },
+  "homepage": "https://veritasdev.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Caiorhcp/veritas.git",
+    "directory": "extension"
+  },
+  "bugs": {
+    "url": "https://github.com/Caiorhcp/veritas/issues"
+  },
+  "categories": ["AI", "Other"],
+  "keywords": ["conventions", "convenções", "agents", "AGENTS.md", "cursor rules", "copilot instructions", "windsurf", "cline", "claude", "graphify"],
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "main": "./dist/extension.js",
+  "l10n": "./l10n",
+  "activationEvents": ["onStartupFinished"],
+  "contributes": {
+    "commands": [
+      { "command": "veritas.apply", "title": "%cmd.apply%", "category": "Veritas" },
+      { "command": "veritas.update", "title": "%cmd.update%", "category": "Veritas" },
+      { "command": "veritas.search", "title": "%cmd.search%", "category": "Veritas", "icon": "$(search)" },
+      { "command": "veritas.newProject", "title": "%cmd.newProject%", "category": "Veritas" },
+      { "command": "veritas.graph.build", "title": "%cmd.graphBuild%", "category": "Veritas" },
+      { "command": "veritas.graph.update", "title": "%cmd.graphUpdate%", "category": "Veritas" },
+      { "command": "veritas.graph.open", "title": "%cmd.graphOpen%", "category": "Veritas" },
+      { "command": "veritas.skill.add", "title": "%cmd.skillAdd%", "category": "Veritas", "icon": "$(add)" },
+      { "command": "veritas.skill.remove", "title": "%cmd.skillRemove%", "category": "Veritas", "icon": "$(remove)" },
+      { "command": "veritas.refresh", "title": "%cmd.refresh%", "category": "Veritas", "icon": "$(refresh)" },
+      { "command": "veritas.openFile", "title": "%cmd.openFile%", "category": "Veritas" },
+      { "command": "veritas.focus", "title": "%cmd.focus%", "category": "Veritas" }
+    ],
+    "menus": {
+      "commandPalette": [
+        { "command": "veritas.skill.add", "when": "false" },
+        { "command": "veritas.skill.remove", "when": "false" },
+        { "command": "veritas.openFile", "when": "false" },
+        { "command": "veritas.focus", "when": "false" }
+      ],
+      "view/title": [
+        { "command": "veritas.search", "when": "view == veritas.skills", "group": "navigation@1" },
+        { "command": "veritas.refresh", "when": "view == veritas.skills", "group": "navigation@2" },
+        { "command": "veritas.apply", "when": "view == veritas.skills", "group": "1_veritas@1" },
+        { "command": "veritas.update", "when": "view == veritas.skills", "group": "1_veritas@2" },
+        { "command": "veritas.newProject", "when": "view == veritas.skills", "group": "1_veritas@3" },
+        { "command": "veritas.graph.build", "when": "view == veritas.skills", "group": "2_graph@1" },
+        { "command": "veritas.graph.update", "when": "view == veritas.skills", "group": "2_graph@2" },
+        { "command": "veritas.graph.open", "when": "view == veritas.skills", "group": "2_graph@3" }
+      ],
+      "view/item/context": [
+        { "command": "veritas.skill.add", "when": "view == veritas.skills && viewItem == skill.inactive", "group": "inline" },
+        { "command": "veritas.skill.add", "when": "view == veritas.skills && viewItem == skill.inactive" },
+        { "command": "veritas.skill.remove", "when": "view == veritas.skills && viewItem == skill.active", "group": "inline" },
+        { "command": "veritas.skill.remove", "when": "view == veritas.skills && viewItem == skill.active" }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        { "id": "veritas", "title": "Veritas", "icon": "media/veritas.svg" }
+      ]
+    },
+    "views": {
+      "veritas": [
+        { "id": "veritas.skills", "name": "%view.skills%", "icon": "media/veritas.svg" }
+      ]
+    },
+    "viewsWelcome": [
+      { "view": "veritas.skills", "contents": "%view.welcome%" }
+    ],
+    "configuration": {
+      "title": "Veritas",
+      "properties": {
+        "veritas.targets": {
+          "type": "array",
+          "description": "%cfg.targets%",
+          "items": {
+            "type": "string",
+            "enum": ["cursor", "copilot", "windsurf", "cline", "roo", "continue", "claude", "agents", "gemini"],
+            "enumDescriptions": [
+              "Cursor: .cursor/rules/veritas-*.mdc",
+              "GitHub Copilot: .github/copilot-instructions.md + .github/instructions/veritas-*.instructions.md",
+              "Windsurf: .windsurf/rules/veritas-*.md",
+              "Cline: .clinerules/veritas-index.md",
+              "Roo Code: .roo/rules/veritas-index.md",
+              "Continue: .continue/rules/veritas-*.md",
+              "Claude Code: CLAUDE.md",
+              "Codex e outros: AGENTS.md",
+              "Gemini CLI: GEMINI.md"
+            ]
+          },
+          "uniqueItems": true,
+          "default": ["cursor", "copilot", "windsurf", "cline", "roo", "continue", "claude", "agents", "gemini"]
+        },
+        "veritas.promptOnOpen": {
+          "type": "boolean",
+          "default": true,
+          "description": "%cfg.promptOnOpen%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "assets": "node scripts/assets.mjs",
+    "prebuild": "npm run assets",
+    "build": "tsc -p tsconfig.json && node scripts/build.mjs",
+    "pretest": "npm run assets",
+    "test": "node --test \"test/*.test.mts\"",
+    "package": "npx --yes @vscode/vsce package",
+    "vscode:prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@types/vscode": "1.90.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^6.0.3"
+  }
+}

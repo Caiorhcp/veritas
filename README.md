@@ -2,12 +2,13 @@
 
 Convenções de engenharia em português, uma por stack, escritas dentro do projeto. O assistente de IA lê antes de escrever código.
 
-Este repositório tem três partes:
+Este repositório tem quatro partes:
 
 | Pasta | O que é |
 |---|---|
 | [`plugin/`](plugin) | O plugin para Claude Code e Cowork: uma skill por stack (Vite, Next.js, NestJS, Django, React Native, Python, Bun + Hono) e skills gerais (princípios, LGPD, atomic design, projeto existente). |
 | [`cli/`](cli) | `create-veritas`: cria um projeto que já funciona com as convenções dentro, em `.veritas/`, ou adiciona as convenções a um projeto existente. |
+| [`extension/`](extension) | A extensão para VS Code, Cursor, Windsurf e afins: aplica as convenções no formato de cada assistente de IA, painel de convenções, projeto novo e o grafo do Graphify. |
 | [`site/`](site) | O site com a documentação, em português, inglês e espanhol. |
 
 ## Usar

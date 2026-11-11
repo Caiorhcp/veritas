@@ -1,0 +1,5 @@
+# copiados no build por scripts/assets.mjs
+conventions/
+process/
+templates/
+*.vsix

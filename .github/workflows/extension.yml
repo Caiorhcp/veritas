@@ -1,0 +1,29 @@
+name: extension
+
+# Testes e pacote da extensão do VS Code. Não publica: publicar é manual (extension/PUBLISHING.md).
+on:
+  pull_request:
+    paths: [extension/**, cli/**, plugin/skills/**, .github/workflows/extension.yml]
+  push:
+    branches: [main]
+    paths: [extension/**, cli/**, plugin/skills/**, .github/workflows/extension.yml]
+
+defaults:
+  run:
+    working-directory: extension
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm ci
+      - run: npm test
+      - run: npx --yes @vscode/vsce package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: veritas-vsix
+          path: extension/*.vsix
