@@ -2,7 +2,7 @@
   "name": "veritas",
   "displayName": "Veritas",
   "description": "%ext.description%",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "caiorhcp",
   "license": "MIT",
   "author": "Caio Gonçalves <caiorhcp12@gmail.com>",

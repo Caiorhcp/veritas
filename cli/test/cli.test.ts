@@ -41,8 +41,8 @@ describe('detectStacks', () => {
 });
 
 describe('resolveSkills', () => {
-  test('front ganha atomic-design; init ganha projeto-existente', () => {
-    assert.deepEqual(resolveSkills(['vite'], catalog, false), ['vite', 'principios', 'lgpd', 'atomic-design']);
+  test('front ganha as skills de interface; init ganha projeto-existente', () => {
+    assert.deepEqual(resolveSkills(['vite'], catalog, false), ['vite', 'principios', 'lgpd', 'atomic-design', 'cores', 'tipografia-e-espacamento', 'direcao-de-arte', 'revisao-de-design']);
     assert.deepEqual(resolveSkills(['django'], catalog, true), ['django', 'principios', 'lgpd', 'projeto-existente']);
   });
   test('o catálogo não traz skills de processo', () => {

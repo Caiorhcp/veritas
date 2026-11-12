@@ -11,7 +11,7 @@ const COMMAND = "npm create veritas@latest my-app -- --stack vite";
 // Cada linha da saída: texto e tom. A árvore é a de um projeto gerado de verdade pela CLI.
 const output = (t: T): [string, string][] => [
   [`◇ ${t.stack}: vite`, "text-soft"],
-  [`◇ ${t.conventions}: vite, principios, lgpd, atomic-design`, "text-soft"],
+  [`◇ ${t.conventions}: vite, principios, lgpd, atomic-design +4`, "text-soft"],
   [`✓ ${t.created} my-app/`, "text-mint"],
   ["", ""],
   ["my-app/", "text-ink"],

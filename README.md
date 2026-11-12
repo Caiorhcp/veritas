@@ -6,7 +6,7 @@ Este repositório tem quatro partes:
 
 | Pasta | O que é |
 |---|---|
-| [`plugin/`](plugin) | O plugin para Claude Code e Cowork: uma skill por stack (Vite, Next.js, NestJS, Django, React Native, Python, Bun + Hono) e skills gerais (princípios, LGPD, atomic design, projeto existente). |
+| [`plugin/`](plugin) | O plugin para Claude Code e Cowork: uma skill por stack (Vite, Next.js, NestJS, Django, React Native, Python, Bun + Hono) skills gerais (princípios, LGPD, projeto existente) e de interface (atomic design, cores, tipografia e espaçamento, direção de arte, revisão de design). |
 | [`cli/`](cli) | `create-veritas`: cria um projeto que já funciona com as convenções dentro, em `.veritas/`, ou adiciona as convenções a um projeto existente. |
 | [`extension/`](extension) | A extensão para VS Code, Cursor, Windsurf e afins: aplica as convenções no formato de cada assistente de IA, painel de convenções, projeto novo e o grafo do Graphify. Download e instalação manual: [veritasdev.vercel.app/pt/extensao](https://veritasdev.vercel.app/pt/extensao). |
 | [`site/`](site) | O site com a documentação, em português, inglês e espanhol. |
@@ -49,6 +49,8 @@ Veritas is a set of engineering conventions (written in Portuguese), one per sta
 O Veritas recomenda e distribui pelo seu marketplace o [Ponytail](https://github.com/DietrichGebert/ponytail), de [Dietrich Gebert](https://github.com/DietrichGebert), sob licença MIT. O Veritas diz o que usar e onde cada coisa mora; o Ponytail diz quanto escrever, com a menor mudança que resolve e menos tokens gastos. O plugin é instalado direto do repositório do autor, sem cópia aqui, e todo o crédito por ele é do Dietrich.
 
 O Veritas também distribui o [Graphify](https://github.com/Graphify-Labs/graphify), da [Graphify Labs](https://github.com/Graphify-Labs), sob licença Apache-2.0. Como o Graphify não publica um plugin para o Claude Code, a skill oficial é copiada sem alterações de uma versão marcada (`tools/sync-graphify.mjs`), com o `LICENSE` e o `NOTICE` originais em `plugins/graphify/`. Todo o crédito pelo Graphify é deles.
+
+As skills de interface (`cores`, `tipografia-e-espacamento`, `direcao-de-arte`, `revisao-de-design`) são texto original do Veritas. Inspiração: foram lidas como referência as skills de design do [Taste Skill](https://github.com/Leonxlnx/taste-skill), de Leonxlnx (MIT): `design-taste-frontend`, `high-end-visual-design`, `minimalist-ui`, `redesign-existing-projects`, `stitch-design-taste` e `industrial-brutalist-ui`; e a `web-design-guidelines`, da [Vercel](https://github.com/vercel-labs/agent-skills). Nada foi copiado delas; o crédito pela inspiração é dos autores.
 
 A ideia de escrever as convenções dentro do projeto, e de que nenhuma resposta é decidida em silêncio, vem do [Prumo](https://prumo.stjosephworks.org), da St. Joseph Works (MIT).
 

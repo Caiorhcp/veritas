@@ -40,7 +40,9 @@ npx create-veritas list   # convenções disponíveis
   INDEX.md          qual convenção vale quando (das descrições das skills)
   VERSION           versão do create-veritas que escreveu
   vite/SKILL.md     a skill da stack e os .md ao lado dela
-  principios/  lgpd/  atomic-design/ (front)  projeto-existente/ (init)
+  principios/  lgpd/  projeto-existente/ (init)
+  atomic-design/  cores/  tipografia-e-espacamento/
+  direcao-de-arte/  revisao-de-design/        (front e mobile)
 AGENTS.md
 CLAUDE.md
 ```

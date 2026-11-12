@@ -1,7 +1,7 @@
 {
   "name": "veritas",
   "displayName": "Veritas",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Convenções de engenharia do Veritas, uma skill por stack. Instala junto o Ponytail (menos código e tokens) e o Graphify (grafo do código).",
   "author": {
     "name": "Caio Gonçalves",

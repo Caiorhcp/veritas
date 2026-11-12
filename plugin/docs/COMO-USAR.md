@@ -126,6 +126,10 @@ cinco jeitos defensáveis e usar o que o time escolheu.
 | `projeto-existente` | primeira mudança num sistema legado, de cliente ou de outra equipe. Pergunta uma vez se é para conservar a arquitetura dele ou remodelar, e anota a resposta no `CLAUDE.md` do projeto |
 | `lgpd` | código com dado pessoal (CPF, saúde, contato, financeiro), log, exportação, integração com terceiro, dado exposto. Também impede que dado real vá para card, PR, prompt ou máquina de dev |
 | `atomic-design` | onde um componente de interface mora, em qualquer front, inclusive templates Django |
+| `cores` | paleta, tokens de cor, tema escuro, cor de botão, link, foco ou erro, contraste |
+| `tipografia-e-espacamento` | fonte, escala de texto, espaçamento, grade, raio, sombra, breakpoint, tamanho de botão e alvo de toque |
+| `direcao-de-arte` | landing page, site, página de produto, hero, onboarding; página com cara genérica |
+| `revisao-de-design` | antes de entregar uma tela: capturas em 1440 e 390, claro e escuro, e a lista de conferência |
 | `clickup` | pegar uma task pelo card, critérios de aceite, relatório de fechamento |
 | `django` | views, serializers, services, models, migrations, auth em Django/DRF |
 | `django-templates` | templates `.html` de Django: componentizar tela, include, form no template, HTMX, Alpine. Num front ainda sem padrão, pergunta a arquitetura antes |

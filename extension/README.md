@@ -2,7 +2,7 @@
 
 As convenções de engenharia do [Veritas](https://veritasdev.vercel.app) dentro do seu projeto, escritas no formato que cada assistente de IA lê: Cursor, GitHub Copilot, Windsurf, Cline, Roo Code, Continue, Claude Code, Codex e Gemini CLI. Funciona no VS Code e nos editores baseados nele (Cursor, Windsurf, VSCodium, Trae).
 
-As convenções são em português, uma por stack (Vite, Next.js, NestJS, Django, React Native, Python, Bun + Hono) mais as gerais (princípios, LGPD, atomic design, projeto existente, mapa do código).
+As convenções são em português, uma por stack (Vite, Next.js, NestJS, Django, React Native, Python, Bun + Hono) mais as gerais (princípios, LGPD, projeto existente, mapa do código) e as de interface (atomic design, cores, tipografia e espaçamento, direção de arte, revisão de design).
 
 ## O que faz
 

@@ -26,6 +26,10 @@ Guia de uso: [`docs/COMO-USAR.md`](docs/COMO-USAR.md).
 | `clickup` | processo | autoral |
 | `executar-tasks` | processo, **só por `/`** | autoral |
 | `atomic-design` | frontend | autoral |
+| `cores` | frontend | WCAG 2.2 (W3C) |
+| `tipografia-e-espacamento` | frontend | WCAG 2.2 · Apple HIG · Android |
+| `direcao-de-arte` | frontend | autoral |
+| `revisao-de-design` | frontend | autoral |
 | `django` | backend | Django 5.2 |
 | `django-templates` | frontend | Django 6.0 |
 | `bun-hono-api` | backend | autoral (Bun, Hono, Drizzle, Zod) |
@@ -101,6 +105,24 @@ O CI roda os mesmos testes, o validador oficial do Claude Code
 
 Ferramentas recomendadas ao redor do Veritas (ponytail, Headroom,
 lgpd-skills) estão em [`docs/FERRAMENTAS.md`](docs/FERRAMENTAS.md).
+
+## Inspiração
+
+As skills `cores`, `tipografia-e-espacamento`, `direcao-de-arte` e
+`revisao-de-design` são texto original do Veritas. Para escrevê-las, estas
+skills de terceiros foram lidas como referência, sem cópia de frase, lista ou
+estrutura:
+
+- `design-taste-frontend`, `high-end-visual-design`, `minimalist-ui`,
+  `redesign-existing-projects`, `stitch-design-taste` e
+  `industrial-brutalist-ui`, do [Taste Skill](https://github.com/Leonxlnx/taste-skill)
+  (Leonxlnx, MIT; as antigas hoje moram em
+  [taste-skill-classics](https://github.com/Leonxlnx/taste-skill-classics)).
+- `web-design-guidelines`, da Vercel
+  ([vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills)).
+
+Os números de contraste e de alvo de toque vêm das fontes oficiais citadas em
+cada skill (W3C, Apple, Android Developers).
 
 ## Licença
 

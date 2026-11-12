@@ -58,7 +58,17 @@ onde entra a lista — com props no lugar dos dados.
 **Page** — o template preenchido. Busca o dado, trata carregamento e erro, e
 entrega para o template. É a única camada que conhece rota.
 
+**Tokens** — abaixo dos atoms. Cor, tamanho de texto, espaço, raio e sombra,
+definidos uma vez (`@theme`, `:root`, objeto `theme` no RN, `base.html` no
+Django). Não são componente: são o que os atoms consomem. Como montar:
+`veritas:cores` e `veritas:tipografia-e-espacamento`.
+
 ## Regras (violação = erro)
+
+- **Componente consome token, nunca valor cru.** Hex, `rgb()`, `px` solto,
+  classe de cor do framework (`bg-blue-600`) ou valor arbitrário (`p-[13px]`)
+  dentro de atom, molecule ou organism é erro: o valor vira token primeiro.
+  Antes de entregar a tela: `veritas:revisao-de-design`.
 
 - **A dependência aponta sempre para baixo.** Atom nunca importa molecule,
   molecule nunca importa organism. Se precisou, o componente está no nível

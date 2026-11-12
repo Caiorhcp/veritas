@@ -16,6 +16,11 @@ O Veritas decide **estrutura**: stack, libs, pastas, nível do componente,
 imports proibidos, arquivos protegidos, LGPD. Em conflito, o Veritas vence,
 sem perguntar.
 
+No visual, a casa tem piso próprio: tokens em vez de valor cru, 60-30-10,
+contraste medido, escala, alvo de toque e revisão na tela renderizada
+(`cores`, `tipografia-e-espacamento`, `direcao-de-arte`, `revisao-de-design`).
+A estética de uma skill de fora entra por cima desse piso, nunca abaixo dele.
+
 Casos que já aparecem:
 
 - A skill de fora sugere lib nova (GSAP, Framer Motion, FlashList,

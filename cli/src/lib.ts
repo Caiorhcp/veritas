@@ -9,6 +9,8 @@ export const VERSION: string = JSON.parse(readFileSync(join(PKG_ROOT, 'package.j
 
 export const GENERAL = ['principios', 'lgpd'];
 const FRONT_SCOPES = new Set(['frontend', 'mobile']);
+/** Skills de interface que entram em toda stack de front ou mobile. */
+const FRONT = ['atomic-design', 'cores', 'tipografia-e-espacamento', 'direcao-de-arte', 'revisao-de-design'];
 
 export interface Skill {
   name: string;
@@ -59,10 +61,10 @@ export function detectStacks(dir: string): string[] {
   return found;
 }
 
-/** Stacks + skills gerais; atomic-design se houver front; projeto-existente no init. */
+/** Stacks + skills gerais; as de interface (FRONT) se houver front; projeto-existente no init. */
 export function resolveSkills(stacks: string[], catalog: Map<string, Skill>, existing: boolean): string[] {
   const skills = [...stacks, ...GENERAL];
-  if (stacks.some((s) => FRONT_SCOPES.has(catalog.get(s)?.escopo ?? ''))) skills.push('atomic-design');
+  if (stacks.some((s) => FRONT_SCOPES.has(catalog.get(s)?.escopo ?? ''))) skills.push(...FRONT);
   if (existing) skills.push('projeto-existente');
   return [...new Set(skills)].filter((s) => catalog.has(s));
 }

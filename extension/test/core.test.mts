@@ -31,7 +31,7 @@ describe('reuso da CLI', () => {
   test('detecção de stack e seleção de skills vêm da CLI', () => {
     const d = tmp({ 'package.json': JSON.stringify({ dependencies: { next: '1', react: '1' } }) });
     assert.deepEqual(detectStacks(d), ['nextjs']);
-    assert.deepEqual(resolveSkills(['nextjs'], catalog, true), ['nextjs', 'principios', 'lgpd', 'atomic-design', 'projeto-existente']);
+    assert.deepEqual(resolveSkills(['nextjs'], catalog, true), ['nextjs', 'principios', 'lgpd', 'atomic-design', 'cores', 'tipografia-e-espacamento', 'direcao-de-arte', 'revisao-de-design', 'projeto-existente']);
   });
   test('as skills de processo do Claude não vão para o projeto, mas aparecem no painel', () => {
     for (const s of ['clickup', 'executar-tasks', 'ajuda', 'atualizar', 'ambiente', 'buscar-skills']) {
