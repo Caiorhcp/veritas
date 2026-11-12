@@ -226,7 +226,7 @@ export const pt = {
     download: "Baixar a extensão",
     meta: "Versão {version} · {size} · licença MIT",
     checksum: "SHA-256 para conferir o arquivo",
-    soon: "Em breve também no VS Code Marketplace e no Open VSX, com atualização automática. Enquanto isso, a instalação é manual e as versões novas aparecem nesta página.",
+    soon: "A extensão é distribuída só por esta página, sem loja de extensões. A instalação é manual e as versões novas aparecem aqui.",
     editorsHeading: "Instalar no seu editor",
     viaMenu: "Pelo menu",
     viaTerminal: "Pelo terminal",

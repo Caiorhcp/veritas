@@ -228,7 +228,7 @@ export const es: Dictionary = {
     download: "Descargar la extensión",
     meta: "Versión {version} · {size} · licencia MIT",
     checksum: "SHA-256 para verificar el archivo",
-    soon: "Pronto también en el VS Code Marketplace y en Open VSX, con actualización automática. Mientras tanto, la instalación es manual y las versiones nuevas aparecen en esta página.",
+    soon: "La extensión se distribuye solo a través de esta página, sin tienda de extensiones. La instalación es manual y las versiones nuevas aparecen aquí.",
     editorsHeading: "Instalar en tu editor",
     viaMenu: "Desde el menú",
     viaTerminal: "Desde la terminal",
