@@ -145,7 +145,9 @@ async function cmdNew(nameArg?: string) {
   if (opts.install) {
     console.log(t.installing(pm));
     // shell: no Windows o npm é npm.cmd; args fixos, sem entrada do usuário.
-    installed = spawnSync(pm, ['install'], { cwd: dir, stdio: 'inherit', shell: process.platform === 'win32' }).status === 0;
+    // NODE_ENV=production faz o gerenciador pular devDependencies (Tailwind, TypeScript) e o build quebra.
+    const { NODE_ENV: _ignorado, ...env } = process.env;
+    installed = spawnSync(pm, ['install'], { cwd: dir, env, stdio: 'inherit', shell: process.platform === 'win32' }).status === 0;
     if (!installed) console.error(t.installFailed(pm));
   }
   console.log(t.created(opts.dir ?? name, pm, installed));
