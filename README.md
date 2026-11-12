@@ -25,6 +25,8 @@ Instalar o Veritas instala junto dois plugins de terceiros:
 - [Ponytail](https://github.com/DietrichGebert/ponytail) (MIT, de Dietrich Gebert): o agente escolhe a menor mudança que resolve e gasta menos tokens.
 - [Graphify](https://github.com/Graphify-Labs/graphify) (Apache-2.0, da Graphify Labs): monta um grafo do código e dos documentos para consultar antes de mexer em projeto grande. A skill oficial vem empacotada sem alterações em `plugins/graphify/`.
 
+O Graphify precisa de Python 3 no computador; na primeira vez, a própria skill instala o pacote `graphifyy` com o pip. O resto do Veritas não depende de Python. A CLI precisa de Node.js.
+
 A skill `mapa-do-codigo` do Veritas diz quando usar cada um. Para comprimir o contexto, a skill `/veritas:ambiente` instala e configura o [Headroom](https://pypi.org/project/headroom-ai/).
 
 Num projeto novo ou existente:
