@@ -1,6 +1,6 @@
 {
   "name": "create-veritas",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Cria um projeto que já funciona, com as convenções do Veritas escritas dentro dele (.veritas/, AGENTS.md, CLAUDE.md).",
   "license": "MIT",
   "author": "Caio Gonçalves <caiorhcp12@gmail.com>",
@@ -9,12 +9,24 @@
     "url": "git+https://github.com/Caiorhcp/veritas.git",
     "directory": "cli"
   },
-  "keywords": ["create", "scaffold", "vite", "nextjs", "agents", "claude", "conventions"],
+  "keywords": [
+    "create",
+    "scaffold",
+    "vite",
+    "nextjs",
+    "agents",
+    "claude",
+    "conventions"
+  ],
   "type": "module",
   "bin": {
     "create-veritas": "dist/index.js"
   },
-  "files": ["dist", "conventions", "templates"],
+  "files": [
+    "dist",
+    "conventions",
+    "templates"
+  ],
   "engines": {
     "node": ">=22.4"
   },
