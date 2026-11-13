@@ -23,7 +23,7 @@ export function ThemeToggle({ toLight, toDark }: { toLight: string; toDark: stri
       type="button"
       onClick={toggle}
       aria-label={dark ? toLight : toDark}
-      className="grid size-10 place-items-center transition-[background-color,transform] hover:bg-surface active:scale-90"
+      className="grid size-11 place-items-center transition-[background-color,transform] hover:bg-surface active:scale-90"
     >
       {dark ? <Sun size={18} aria-hidden /> : <Moon size={18} aria-hidden />}
     </button>

@@ -72,7 +72,7 @@ export function Search({ lang, d }: { lang: Locale; d: Dictionary }) {
         type="button"
         onClick={open}
         aria-keyshortcuts="/"
-        className="flex h-10 items-center gap-2 bg-surface px-3 text-small text-soft transition-[background-color,color,transform] hover:bg-sunken hover:text-ink active:scale-95"
+        className="flex h-11 min-w-11 items-center justify-center gap-2 bg-surface px-3 text-small text-soft transition-[background-color,color,transform] hover:bg-sunken hover:text-ink active:scale-95"
       >
         <SearchIcon size={16} aria-hidden />
         <span className="hidden lg:inline">{d.nav.searchHint}</span>
@@ -98,7 +98,7 @@ export function Search({ lang, d }: { lang: Locale; d: Dictionary }) {
             aria-controls="resultados-busca"
             className="h-14 min-w-0 flex-1 bg-transparent text-lead outline-none placeholder:text-soft"
           />
-          <button type="button" onClick={() => dialog.current?.close()} aria-label={d.search.close} className="grid size-9 place-items-center hover:bg-sunken active:scale-90">
+          <button type="button" onClick={() => dialog.current?.close()} aria-label={d.search.close} className="grid size-11 place-items-center hover:bg-sunken active:scale-90">
             <X size={18} aria-hidden />
           </button>
         </div>

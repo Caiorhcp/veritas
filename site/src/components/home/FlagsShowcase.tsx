@@ -36,7 +36,7 @@ export function FlagsShowcase({ lang, d, copy }: { lang: Locale; d: Dictionary["
             </dl>
           </RevealItem>
           <RevealItem>
-            <Link href={`/${lang}/cli`} className="mt-10 inline-block font-medium text-accent underline-offset-4 hover:underline">
+            <Link href={`/${lang}/cli`} className="tap mt-10 inline-block font-medium text-accent underline-offset-4 hover:underline">
               {d.reference} →
             </Link>
           </RevealItem>
@@ -53,7 +53,7 @@ export function FlagsShowcase({ lang, d, copy }: { lang: Locale; d: Dictionary["
                   role="radio"
                   aria-checked={stack === s}
                   onClick={() => setStack(s)}
-                  className={`rounded-lg px-4 py-1.5 text-small font-semibold transition-[background-color,color] duration-300 ${
+                  className={`rounded-lg px-4 py-1.5 text-small font-semibold pointer-coarse:min-h-11 transition-[background-color,color] duration-300 ${
                     stack === s ? "bg-accent text-on-accent" : "text-on-field-soft hover:text-on-field"
                   }`}
                 >

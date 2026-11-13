@@ -24,7 +24,7 @@ export function PackageCommand({ args = "my-app", copy, label }: { args?: string
             role="tab"
             aria-selected={m === pm}
             onClick={() => setPm(m)}
-            className={`tab-cut px-4 pt-1.5 pb-1 text-small font-medium transition-[background-color,color,transform] active:scale-95 ${
+            className={`tab-cut px-4 pt-1.5 pb-1 text-small pointer-coarse:min-h-11 font-medium transition-[background-color,color,transform] active:scale-95 ${
               m === pm ? "bg-surface text-ink" : "text-soft hover:text-ink"
             }`}
           >
@@ -33,7 +33,7 @@ export function PackageCommand({ args = "my-app", copy, label }: { args?: string
         ))}
       </div>
       <div role="tabpanel" className="flex items-center justify-between gap-3 bg-surface py-1 pr-1 pl-4">
-        <pre className="min-w-0 overflow-x-auto py-2.5 font-mono text-small sm:text-base">
+        <pre className="min-w-0 py-2.5 font-mono text-small whitespace-pre-wrap wrap-anywhere sm:text-base">
           <code>{cmd}</code>
         </pre>
         <CopyButton text={cmd} labels={copy} />

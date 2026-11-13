@@ -19,7 +19,7 @@ export function CopyButton({ text, labels, className = "" }: { text: string; lab
       type="button"
       onClick={copy}
       aria-label={`${labels.label}: ${text}`}
-      className={`inline-flex shrink-0 items-center gap-1.5 px-3 py-2 text-small font-medium transition-[background-color,transform] hover:bg-sunken active:scale-95 ${className}`}
+      className={`inline-flex shrink-0 items-center gap-1.5 px-3 py-2 pointer-coarse:min-h-11 text-small font-medium transition-[background-color,transform] hover:bg-sunken active:scale-95 ${className}`}
     >
       {done ? <Check size={15} aria-hidden /> : <Copy size={15} aria-hidden />}
       <span aria-live="polite">{done ? labels.copied : labels.copy}</span>

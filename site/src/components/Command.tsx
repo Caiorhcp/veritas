@@ -5,7 +5,7 @@ import { CopyButton } from "./CopyButton";
 export function Command({ cmd, copy, className = "", tone = "bg-surface" }: { cmd: string; copy: Dictionary["copy"]; className?: string; tone?: string }) {
   return (
     <div className={`flex items-center justify-between gap-3 py-1 pr-1 pl-4 ${tone} ${className}`}>
-      <pre className="min-w-0 overflow-x-auto py-2 font-mono text-small">
+      <pre className="min-w-0 py-2 font-mono text-small whitespace-pre-wrap wrap-anywhere">
         <code>{cmd}</code>
       </pre>
       <CopyButton text={cmd} labels={copy} />

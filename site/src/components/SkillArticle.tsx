@@ -29,7 +29,7 @@ export function SkillArticle({
     <div className="mx-auto grid max-w-[90rem] gap-12 px-4 pt-12 pb-32 sm:px-8 sm:pt-16 lg:grid-cols-12">
       <aside className="lg:col-span-3">
         <div className="space-y-8 lg:sticky lg:top-24">
-          <Link href={`/${lang}/skills`} className="inline-block font-medium underline-offset-4 hover:underline">
+          <Link href={`/${lang}/skills`} className="inline-block font-medium underline-offset-4 hover:underline tap">
             ← {s.back}
           </Link>
           <div className="bg-field p-6 text-on-field">
@@ -52,7 +52,7 @@ export function SkillArticle({
               <p className="text-small font-bold">{s.files}</p>
               <ul className="mt-3 space-y-1 text-small">
                 <li>
-                  <Link href={base} aria-current={isMain ? "page" : undefined} className={`block px-2 py-1 ${isMain ? "bg-surface font-medium" : "hover:bg-surface"}`}>
+                  <Link href={base} aria-current={isMain ? "page" : undefined} className={`block px-2 py-1 pointer-coarse:py-3.5 ${isMain ? "bg-surface font-medium" : "hover:bg-surface"}`}>
                     SKILL.md
                   </Link>
                 </li>
@@ -61,7 +61,7 @@ export function SkillArticle({
                   const href = f.isMarkdown ? `${base}/${f.path.slice(0, -3)}` : repoFile(`plugin/skills/${skill.name}/${f.path}`);
                   return (
                     <li key={f.path}>
-                      <Link href={href} aria-current={current ? "page" : undefined} className={`block px-2 py-1 break-all ${current ? "bg-surface font-medium" : "hover:bg-surface"}`}>
+                      <Link href={href} aria-current={current ? "page" : undefined} className={`block px-2 py-1 break-all pointer-coarse:py-3.5 ${current ? "bg-surface font-medium" : "hover:bg-surface"}`}>
                         {f.path}
                         {f.isMarkdown && <span className="block text-small text-soft">{docTitle(readSkillDoc(skill.name, f.path) ?? "", f.path)}</span>}
                       </Link>
@@ -84,7 +84,7 @@ export function SkillArticle({
         {isMain && <p lang="pt-BR" className="mb-10 text-lead">{skill.description}</p>}
         <PtNote text={s.ptNote} />
         <div lang="pt-BR" className="prose mt-10" dangerouslySetInnerHTML={{ __html: html }} />
-        <a href={repoFile(`plugin/skills/${skill.name}/${file}`)} className="mt-16 inline-block font-medium underline underline-offset-4">
+        <a href={repoFile(`plugin/skills/${skill.name}/${file}`)} className="tap mt-16 inline-block font-medium underline underline-offset-4">
           {s.onGithub} →
         </a>
       </article>

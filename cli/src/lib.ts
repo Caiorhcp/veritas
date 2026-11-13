@@ -10,7 +10,7 @@ export const VERSION: string = JSON.parse(readFileSync(join(PKG_ROOT, 'package.j
 export const GENERAL = ['principios', 'lgpd'];
 const FRONT_SCOPES = new Set(['frontend', 'mobile']);
 /** Skills de interface que entram em toda stack de front ou mobile. */
-const FRONT = ['atomic-design', 'cores', 'tipografia-e-espacamento', 'direcao-de-arte', 'revisao-de-design'];
+const FRONT = ['atomic-design', 'cores', 'tipografia-e-espacamento', 'direcao-de-arte', 'revisao-de-design', 'responsividade'];
 
 export interface Skill {
   name: string;

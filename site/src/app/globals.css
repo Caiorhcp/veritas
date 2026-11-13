@@ -102,6 +102,10 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; text-wrap: balance; }
 ::selection { background: var(--ink); color: var(--ground); }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .tabular { font-variant-numeric: tabular-nums; }
+/* Item de grid nasce com min-width:auto e estica a coluna até caber o <pre> mais largo: no celular isso vira rolagem da página inteira */
+@layer base { .grid > * { min-width: 0; } }
+/* Alvo de toque de 44px em link de texto solto, só onde o ponteiro é o dedo */
+@utility tap { @media (pointer: coarse) { display: inline-flex; align-items: center; min-height: 2.75rem; min-width: 2.75rem; } }
 
 /* O motivo: o corte de 45° da aba de pasta, o mesmo do V da marca */
 .tab-cut { border-radius: 0.7rem; }
@@ -121,7 +125,7 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; text-wrap: balance; }
 /* Borda serrilhada da folha impressa (lista de skills): dentes de 45°, o mesmo ângulo da marca */
 .scallop { clip-path: polygon(0.00% 10px, 1.25% 0, 2.50% 10px, 3.75% 0, 5.00% 10px, 6.25% 0, 7.50% 10px, 8.75% 0, 10.00% 10px, 11.25% 0, 12.50% 10px, 13.75% 0, 15.00% 10px, 16.25% 0, 17.50% 10px, 18.75% 0, 20.00% 10px, 21.25% 0, 22.50% 10px, 23.75% 0, 25.00% 10px, 26.25% 0, 27.50% 10px, 28.75% 0, 30.00% 10px, 31.25% 0, 32.50% 10px, 33.75% 0, 35.00% 10px, 36.25% 0, 37.50% 10px, 38.75% 0, 40.00% 10px, 41.25% 0, 42.50% 10px, 43.75% 0, 45.00% 10px, 46.25% 0, 47.50% 10px, 48.75% 0, 50.00% 10px, 51.25% 0, 52.50% 10px, 53.75% 0, 55.00% 10px, 56.25% 0, 57.50% 10px, 58.75% 0, 60.00% 10px, 61.25% 0, 62.50% 10px, 63.75% 0, 65.00% 10px, 66.25% 0, 67.50% 10px, 68.75% 0, 70.00% 10px, 71.25% 0, 72.50% 10px, 73.75% 0, 75.00% 10px, 76.25% 0, 77.50% 10px, 78.75% 0, 80.00% 10px, 81.25% 0, 82.50% 10px, 83.75% 0, 85.00% 10px, 86.25% 0, 87.50% 10px, 88.75% 0, 90.00% 10px, 91.25% 0, 92.50% 10px, 93.75% 0, 95.00% 10px, 96.25% 0, 97.50% 10px, 98.75% 0, 100% 10px, 100.00% calc(100% - 10px), 98.75% 100%, 97.50% calc(100% - 10px), 96.25% 100%, 95.00% calc(100% - 10px), 93.75% 100%, 92.50% calc(100% - 10px), 91.25% 100%, 90.00% calc(100% - 10px), 88.75% 100%, 87.50% calc(100% - 10px), 86.25% 100%, 85.00% calc(100% - 10px), 83.75% 100%, 82.50% calc(100% - 10px), 81.25% 100%, 80.00% calc(100% - 10px), 78.75% 100%, 77.50% calc(100% - 10px), 76.25% 100%, 75.00% calc(100% - 10px), 73.75% 100%, 72.50% calc(100% - 10px), 71.25% 100%, 70.00% calc(100% - 10px), 68.75% 100%, 67.50% calc(100% - 10px), 66.25% 100%, 65.00% calc(100% - 10px), 63.75% 100%, 62.50% calc(100% - 10px), 61.25% 100%, 60.00% calc(100% - 10px), 58.75% 100%, 57.50% calc(100% - 10px), 56.25% 100%, 55.00% calc(100% - 10px), 53.75% 100%, 52.50% calc(100% - 10px), 51.25% 100%, 50.00% calc(100% - 10px), 48.75% 100%, 47.50% calc(100% - 10px), 46.25% 100%, 45.00% calc(100% - 10px), 43.75% 100%, 42.50% calc(100% - 10px), 41.25% 100%, 40.00% calc(100% - 10px), 38.75% 100%, 37.50% calc(100% - 10px), 36.25% 100%, 35.00% calc(100% - 10px), 33.75% 100%, 32.50% calc(100% - 10px), 31.25% 100%, 30.00% calc(100% - 10px), 28.75% 100%, 27.50% calc(100% - 10px), 26.25% 100%, 25.00% calc(100% - 10px), 23.75% 100%, 22.50% calc(100% - 10px), 21.25% 100%, 20.00% calc(100% - 10px), 18.75% 100%, 17.50% calc(100% - 10px), 16.25% 100%, 15.00% calc(100% - 10px), 13.75% 100%, 12.50% calc(100% - 10px), 11.25% 100%, 10.00% calc(100% - 10px), 8.75% 100%, 7.50% calc(100% - 10px), 6.25% 100%, 5.00% calc(100% - 10px), 3.75% 100%, 2.50% calc(100% - 10px), 1.25% 100%, 0 calc(100% - 10px)); }
 /* Texto das skills, renderizado do SKILL.md */
-.prose { font-size: var(--text-body); line-height: 1.65; max-width: 72ch; }
+.prose { font-size: var(--text-body); line-height: 1.65; max-width: 72ch; overflow-wrap: break-word; }
 .prose > * + * { margin-top: 1.1em; }
 .prose h1 { font-size: var(--text-head); line-height: 1; margin-top: 0; }
 .prose h2 { font-size: 1.75rem; line-height: 1.15; margin-top: 2.4em; }

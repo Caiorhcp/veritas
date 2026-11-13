@@ -55,6 +55,7 @@ esta tabela:
 | `tipografia-e-espacamento` | escala de texto, fontes, grade de 4/8, raio, sombra, alvo de toque | sozinha |
 | `direcao-de-arte` | landing e página pública sem cara de template ou "de IA" | sozinha |
 | `revisao-de-design` | capturar e conferir a tela (1440 e 390, claro e escuro) antes de entregar | sozinha |
+| `responsividade` | layout do celular ao monitor largo, rolagem horizontal, menu de celular, área segura | sozinha |
 | `django` | views, serializers, services, models, auth em Django/DRF | sozinha |
 | `django-templates` | front em templates Django: componentes, forms no template, HTMX, Alpine | sozinha |
 | `bun-hono-api` | API em Bun + Hono — Hono, Drizzle, Zod, typed errors, JWT | sozinha |
@@ -70,7 +71,7 @@ esta tabela:
 | `executar-tasks` | pegar o próximo card com a etiqueta `agente`, trabalhar e abrir o PR | só por `/` ou agendamento |
 | `ambiente` | conferir e ajustar as ferramentas da máquina (Veritas, Firecrawl, Headroom, claude-mem) ao padrão da casa | só por `/` |
 
-Termine dizendo que as dezenove primeiras entram sozinhas quando o assunto aparece;
+Termine dizendo que as vinte primeiras entram sozinhas quando o assunto aparece;
 as cinco últimas só quando a pessoa chama (a `executar-tasks` também por
 tarefa agendada).
 

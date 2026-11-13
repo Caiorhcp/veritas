@@ -18,7 +18,7 @@ export function StackBoard({ lang, d, cta }: { lang: Locale; d: Dictionary["home
             </h2>
             <p className="mt-5 text-lead text-soft">{d.lead}</p>
           </div>
-          <Link href={`/${lang}/skills`} className="font-medium text-accent underline-offset-4 hover:underline">
+          <Link href={`/${lang}/skills`} className="tap font-medium text-accent underline-offset-4 hover:underline">
             {cta} →
           </Link>
         </RevealItem>

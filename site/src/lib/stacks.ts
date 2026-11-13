@@ -12,4 +12,4 @@ export const STACKS: Stack[] = [
   { name: "bun-hono-api", label: "Bun + Hono", snippet: "bun test", libs: "Bun · Hono · Drizzle · Zod · uuidv7 · Biome", cli: false, tint: "var(--mint)" },
 ];
 
-export const GENERAL_ORDER = ["principios", "projeto-existente", "lgpd", "docs-oficiais", "atomic-design", "cores", "tipografia-e-espacamento", "direcao-de-arte", "revisao-de-design", "clickup", "executar-tasks", "ajuda", "atualizar", "buscar-skills", "ambiente"];
+export const GENERAL_ORDER = ["principios", "projeto-existente", "lgpd", "docs-oficiais", "atomic-design", "cores", "tipografia-e-espacamento", "direcao-de-arte", "revisao-de-design", "responsividade", "clickup", "executar-tasks", "ajuda", "atualizar", "buscar-skills", "ambiente"];

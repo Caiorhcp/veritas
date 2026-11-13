@@ -30,7 +30,7 @@ export function Hero({ lang, d }: { lang: Locale; d: Dictionary }) {
               {h.primary}
               <ArrowRight size={18} aria-hidden className="transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href={`/${lang}/skills`} className="font-medium text-soft underline-offset-4 transition-colors hover:text-ink hover:underline">
+            <Link href={`/${lang}/skills`} className="tap font-medium text-soft underline-offset-4 transition-colors hover:text-ink hover:underline">
               {h.stacksCta}
             </Link>
           </RevealItem>

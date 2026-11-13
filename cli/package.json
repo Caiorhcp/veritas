@@ -1,6 +1,6 @@
 {
   "name": "create-veritas",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Cria um projeto que já funciona, com as convenções do Veritas escritas dentro dele (.veritas/, AGENTS.md, CLAUDE.md).",
   "license": "MIT",
   "author": "Caio Gonçalves <caiorhcp12@gmail.com>",

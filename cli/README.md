@@ -42,7 +42,8 @@ npx create-veritas list   # convenções disponíveis
   vite/SKILL.md     a skill da stack e os .md ao lado dela
   principios/  lgpd/  projeto-existente/ (init)
   atomic-design/  cores/  tipografia-e-espacamento/
-  direcao-de-arte/  revisao-de-design/        (front e mobile)
+  direcao-de-arte/  revisao-de-design/
+  responsividade/                              (front e mobile)
 AGENTS.md
 CLAUDE.md
 ```

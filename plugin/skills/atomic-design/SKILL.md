@@ -79,6 +79,9 @@ Django). Não são componente: são o que os atoms consomem. Como montar:
   é o que os mantém testáveis e reutilizáveis.
 - **Template não tem dado real.** Se você precisou de um `useEffect` no
   template, aquilo é uma page.
+- **Componente responde ao próprio espaço, não à janela.** O que muda de
+  forma conforme a largura do lugar onde está usa container query
+  (`veritas:responsividade`).
 - **Não crie o nível por antecipação.** Componente usado numa tela só começa
   dentro da própria page; sobe para `organisms/` quando a segunda tela precisar
   dele. Pasta cheia de componente com um uso só é custo sem retorno.

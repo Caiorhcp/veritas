@@ -11,7 +11,7 @@ const COMMAND = "npm create veritas@latest my-app -- --stack vite";
 // Cada linha da saída: texto e tom. A árvore é a de um projeto gerado de verdade pela CLI.
 const output = (t: T): [string, string][] => [
   [`◇ ${t.stack}: vite`, "text-soft"],
-  [`◇ ${t.conventions}: vite, principios, lgpd, atomic-design +4`, "text-soft"],
+  [`◇ ${t.conventions}: vite, principios, lgpd, atomic-design +5`, "text-soft"],
   [`✓ ${t.created} my-app/`, "text-mint"],
   ["", ""],
   ["my-app/", "text-ink"],
@@ -61,7 +61,7 @@ export function Terminal({ t }: { t: T }) {
         <span className="size-3 rounded-full bg-mint/70" />
         <span className="ml-3 text-small text-soft">{t.title}</span>
       </div>
-      <pre className="min-h-[24rem] overflow-hidden p-5 font-mono text-[13px] leading-[1.75] sm:p-6 sm:text-sm">
+      <pre className="min-h-[24rem] overflow-hidden whitespace-pre-wrap wrap-anywhere p-5 font-mono text-[13px] leading-[1.75] sm:p-6 sm:text-sm">
         <code>
           <span className="text-mint">$ </span>
           <span className="text-ink">{COMMAND.slice(0, typed)}</span>

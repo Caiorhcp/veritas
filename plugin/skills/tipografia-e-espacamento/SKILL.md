@@ -171,6 +171,7 @@ Código dos tokens por stack: [escalas.md](escalas.md).
 - [ ] RN: tela conferida com a fonte do sistema no máximo.
 
 Cor: `veritas:cores`. Composição de página pública: `veritas:direcao-de-arte`.
+Layout em várias larguras e rolagem horizontal: `veritas:responsividade`.
 Conferir na tela: `veritas:revisao-de-design`.
 
 ## Origem

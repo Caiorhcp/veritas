@@ -30,6 +30,7 @@ Guia de uso: [`docs/COMO-USAR.md`](docs/COMO-USAR.md).
 | `tipografia-e-espacamento` | frontend | WCAG 2.2 · Apple HIG · Android |
 | `direcao-de-arte` | frontend | autoral |
 | `revisao-de-design` | frontend | autoral |
+| `responsividade` | frontend | WCAG 2.2 (W3C) · MDN |
 | `django` | backend | Django 5.2 |
 | `django-templates` | frontend | Django 6.0 |
 | `bun-hono-api` | backend | autoral (Bun, Hono, Drizzle, Zod) |

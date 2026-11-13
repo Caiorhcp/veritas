@@ -39,7 +39,7 @@ Envie a mudança; a Vercel publica o arquivo novo em `https://veritasdev.vercel.
 
    ```powershell
    npx @vscode/vsce login caiorhcp          # cola o token quando pedir
-   npx @vscode/vsce publish                 # ou: npx @vscode/vsce publish --packagePath veritas-0.2.0.vsix
+   npx @vscode/vsce publish                 # ou: npx @vscode/vsce publish --packagePath veritas-0.3.0.vsix
    ```
 
 A página fica em `https://marketplace.visualstudio.com/items?itemName=caiorhcp.veritas` depois da verificação automática (alguns minutos).
@@ -53,7 +53,7 @@ A página fica em `https://marketplace.visualstudio.com/items?itemName=caiorhcp.
 
    ```powershell
    npx ovsx create-namespace caiorhcp -p <token>
-   npx ovsx publish veritas-0.2.0.vsix -p <token>
+   npx ovsx publish veritas-0.3.0.vsix -p <token>
    ```
 
    Em vez de `-p`, dá para usar a variável `OVSX_PAT` só nessa sessão do terminal: `$env:OVSX_PAT="<token>"`.
@@ -63,4 +63,4 @@ A página fica em `https://marketplace.visualstudio.com/items?itemName=caiorhcp.
 ## Conferir antes de publicar
 
 - `npx @vscode/vsce ls` lista o que entra no pacote: tem que ter `dist/`, `conventions/`, `process/`, `templates/`, `l10n/`, `media/`, `icon.png`, `README.md`, `LICENSE`, `package.nls*.json`, e nada de `src/`, `test/` ou `node_modules/`.
-- Instale o `.vsix` localmente: `code --install-extension veritas-0.2.0.vsix --force` (no Cursor: `cursor --install-extension …`).
+- Instale o `.vsix` localmente: `code --install-extension veritas-0.3.0.vsix --force` (no Cursor: `cursor --install-extension …`).

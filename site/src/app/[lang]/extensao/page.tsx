@@ -40,7 +40,7 @@ export default async function ExtensionPage({ params }: PageProps<"/[lang]/exten
           </span>
         </div>
         <details className="mt-5 max-w-full text-small text-soft">
-          <summary className="cursor-pointer">{e.checksum}</summary>
+          <summary className="cursor-pointer pointer-coarse:py-3.5">{e.checksum}</summary>
           <code className="mt-2 block font-mono break-all">{vsix.sha256}</code>
         </details>
         <p className="mt-6 max-w-[60ch] text-small text-soft">{e.soon}</p>

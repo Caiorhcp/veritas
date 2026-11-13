@@ -30,6 +30,7 @@ critério de aprovação:
 - cor, tema e contraste → `veritas:cores`
 - tipo, espaço, grade e alvo de toque → `veritas:tipografia-e-espacamento`
 - página pública com cara genérica → `veritas:direcao-de-arte`
+- rolagem horizontal, grade, menu e tabela no celular → `veritas:responsividade`
 - componente no nível errado, cor ou medida solta no componente →
   `veritas:atomic-design`
 

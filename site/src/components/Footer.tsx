@@ -65,10 +65,10 @@ export function Footer({ lang, d }: { lang: Locale; d: Dictionary }) {
           {columns.map((c) => (
             <div key={c.title} className="md:col-span-2">
               <h2 className="text-small font-bold">{c.title}</h2>
-              <ul className="mt-3 space-y-2 text-small">
+              <ul className="mt-3 space-y-2 text-small pointer-coarse:space-y-0">
                 {c.links.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} className="text-on-field-soft transition-colors hover:text-on-field">
+                    <Link href={l.href} className="text-on-field-soft transition-colors hover:text-on-field tap">
                       {l.label}
                     </Link>
                   </li>
@@ -90,7 +90,7 @@ export function Footer({ lang, d }: { lang: Locale; d: Dictionary }) {
         </div>
         <div className="mt-14 flex items-center justify-between gap-4 text-small">
           <p>© {new Date().getFullYear()} Caio Gonçalves</p>
-          <a href="#conteudo" className="tab-cut bg-on-field px-4 py-2 font-medium text-field transition-transform hover:-translate-y-0.5 active:scale-95">
+          <a href="#conteudo" className="tab-cut bg-on-field tap px-4 py-2 font-medium text-field transition-transform hover:-translate-y-0.5 active:scale-95">
             {d.footer.top}
           </a>
         </div>
